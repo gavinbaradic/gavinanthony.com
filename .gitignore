@@ -19,3 +19,6 @@
 
 # Ignore Node Modules
 /node_modules
+
+# Ignore /Vendor
+/vendor

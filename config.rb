@@ -34,6 +34,17 @@ end
 #   end
 # end
 
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = '104.131.73.163/'
+  deploy.path   = '/var/www/gavinanthony.com'
+  deploy.user  = 'root'
+  # Set deploy.port to define a port for the deploy server. Defaults to 22.
+  deploy.clean = true # removes orphaned files on remote host, default: false
+end
+
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
