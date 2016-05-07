@@ -16,5 +16,4 @@ gem 'middleman-compass', '>= 4.0.0'
 
 group :production do
   gem 'unicorn'
-  gem 'pg'
 end

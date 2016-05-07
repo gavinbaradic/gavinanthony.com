@@ -16,7 +16,7 @@ run ::Middleman::Rack.new(app).to_app
 activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.host   = '104.131.73.163'
-  deploy.path   = '/var/www/gavinanthony.com/public_html/_site'
+  deploy.path   = '/home/rails/gavinanthony.com/build'
   deploy.user  = 'root'
   # Set deploy.port to define a port for the deploy server. Defaults to 22.
   deploy.clean = true # removes orphaned files on remote host, default: false
