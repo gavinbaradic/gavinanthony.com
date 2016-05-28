@@ -92,7 +92,7 @@ GEM
       servolux
       tilt (~> 1.4.1)
       uglifier (~> 3.0)
-    middleman-deploy (1.0.0)
+    middleman-deploy (2.0.0.pre.alpha)
       middleman-core (>= 3.2)
       net-sftp
       ptools
@@ -144,9 +144,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (>= 4.0.0)
-  middleman-compass (>= 4.0.0)
-  middleman-deploy (~> 1.0)
+  middleman
+  middleman-compass
+  middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload
   tzinfo-data
   wdm (~> 0.1.0)

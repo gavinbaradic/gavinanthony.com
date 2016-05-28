@@ -36,14 +36,13 @@ end
 
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.host   = '104.131.73.163/'
-  deploy.path   = '/var/www/gavinanthony.com'
+  deploy.deploy_method = :rsync
+  deploy.host   = '45.55.152.11'
+  deploy.path   = '/var/www/gavinanthony.com/build'
   deploy.user  = 'root'
   # Set deploy.port to define a port for the deploy server. Defaults to 22.
   deploy.clean = true # removes orphaned files on remote host, default: false
 end
-
 
 # Build-specific configuration
 configure :build do
