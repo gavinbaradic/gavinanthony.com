@@ -108,7 +108,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    multi_json (1.12.0)
+    multi_json (1.12.1)
     neat (1.7.2)
       bourbon (>= 4.0)
       sass (>= 3.3)
@@ -160,4 +160,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.12.3
+   1.12.5
