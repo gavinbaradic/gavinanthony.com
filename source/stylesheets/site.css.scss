@@ -2,3 +2,67 @@
 @import "normalize";
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "typography";
+@import "variables";
+
+body {
+  font-family: "Whitney", "Avenir", "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+//  ———————————————————————————
+//  Basic Elements
+//  ———————————————————————————
+a {
+  @extend .g4;
+  @extend .f5;
+  @extend .w3;
+  @extend .no-underline;
+}
+h1 {
+  @extend .g2;
+  @extend .f3;
+  @extend .w3;
+  @extend .l15;
+  margin: 72px 0 48px 0;
+}
+a.button {
+  @extend .g9;
+  @extend .f6;
+  @extend .w4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border-radius: 100px;
+  background: $base-color;
+}
+//  ———————————————————————————
+//  Layouts
+//  ———————————————————————————
+.container {
+  @include outer-container();
+  margin: 0 auto;
+  header & {
+    @extend .border-bottom;
+  }
+}
+header {
+  background: white;
+  nav {
+    @include unstyled-list();
+    @include horizontal-list();
+    padding: 24px 0;
+    &:last-child {
+      @include pull-right;
+      li {
+        padding: 6px 0;
+      }
+    }
+    li {
+      margin: 0 12px;
+      a {
+        letter-spacing: .5px;
+      }
+    }
+  }
+}
