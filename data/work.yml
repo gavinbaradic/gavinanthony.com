@@ -1,0 +1,21 @@
+clients:
+  - name: "Likeli"
+    date: "2015–Present"
+    current: ' class="current"'
+  - name: "Taplet/Joyspace"
+    date: "2014–2015"
+  - name: "Beekeeper Data"
+    date: "2014"
+  - name: "Wemontage"
+    date: "2013"
+  - name: "Optyn"
+    date: "2013"
+freelance:
+  - name: "Kioh"
+    date: "2015"
+  - name: "Sun Sport Marine"
+    date: "2015"
+  - name: "Light"
+    date: "2013–2014"
+  - name: "Blip"
+    date: "2014"
