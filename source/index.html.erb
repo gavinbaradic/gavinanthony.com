@@ -1,4 +1,18 @@
 ---
 title: Gavin Anthony
 ---
-<h1>hi</h1>
+<h1>Product designer from Milwaukee, WI.<br>
+Currently leading design at Likeli in Wilmington, NC.</h1>
+<a href="" class="button button-hero">Get in touch</a>
+<h2>My Work</h2>
+<ul class="list">
+  <% data.work.clients.each do | client | %>
+    <li<%= client.current %>><a href="#"><%= client.name %></a> <span><%= client.date %></span></li>
+  <% end %>
+</ul>
+<h2>Freelance</h2>
+<ul class="list">
+  <% data.work.freelance.each do | client | %>
+    <li><a href="#"><%= client.name %></a> <span><%= client.date %></span></li>
+  <% end %>
+</ul>
