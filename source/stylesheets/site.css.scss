@@ -10,6 +10,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $base-color;
+  overflow-y: scroll;
+}
+//  ———————————————————————————
+//  Layouts
+//  ———————————————————————————
+.wrapper {
+  background: white;
+  margin: 10px;
+}
+.container {
+  @include outer-container;
+  margin: 0 auto;
+  header & {
+    @extend .border-bottom;
+  }
+}
+.full {
+  @include span-columns(12);
 }
 //  ———————————————————————————
 //  Basic Elements
@@ -36,6 +54,13 @@ h2 {
   @extend .w3;
   @extend .l15;
   margin: 32px 0 8px 0;
+}
+p {
+  @extend .g3;
+  @extend .f5;
+  @extend .w3;
+  @extend .l15;
+  max-width: 30rem;
 }
 a.button {
   @extend .g9;
@@ -79,18 +104,8 @@ ol.list, ul.list {
   }
 }
 //  ———————————————————————————
-//  Layouts
+//  Page specific
 //  ———————————————————————————
-.wrapper {
-  background: white;
-}
-.container {
-  @include outer-container();
-  margin: 0 auto;
-  header & {
-    @extend .border-bottom;
-  }
-}
 header {
   background: white;
   nav {

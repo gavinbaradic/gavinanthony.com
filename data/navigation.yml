@@ -1,0 +1,12 @@
+header:
+  - title: "About Me"
+    link: "/about"
+  - title: "Journal"
+    link: "/journal"
+footer:
+  - title: "Dribbble"
+    link: "http://dribbble.com/gavinanthony"
+  - title: "Github"
+    link: "http://github.com/gavinanthony"
+  - title: "Email"
+    link: "mailto:iam@gavinanthony.com"

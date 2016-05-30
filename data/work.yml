@@ -1,7 +1,7 @@
 clients:
   - name: "Likeli"
     date: "2015–Present"
-    current: ' class="current"'
+    current: "current"
   - name: "Taplet/Joyspace"
     date: "2014–2015"
   - name: "Beekeeper Data"

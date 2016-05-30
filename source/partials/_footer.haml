@@ -1,0 +1,11 @@
+%footer
+  %div.container
+    %nav.left
+      %ul
+        %li
+          = link_to '&copy; 2016 Gavin Anthony', '/'
+    %nav.left
+      %ul
+        - data.navigation.footer.each do | link |
+          %li
+            = link_to link.title, link.link, target: '_blank'
