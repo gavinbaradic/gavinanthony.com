@@ -14,7 +14,23 @@ activate :deploy do |deploy|
   deploy.clean = true # removes orphaned files on remote host, default: false
 end
 
+helpers do
+  def is_page_active(page)
+    current_page.url == page ? {:class => 'active'} : {}
+  end
+end
+
+activate :directory_indexes
+
+activate :blog do |journal|
+  journal.prefix = "journal"
+  journal.permalink = "{title}"
+  journal.layout = "blog"
+end
+
 configure :build do
-  # activate :minify_css
-  # activate :minify_javascript
+  activate :asset_hash
+  activate :minify_css
+  activate :minify_javascript
+  activate :gzip
 end
