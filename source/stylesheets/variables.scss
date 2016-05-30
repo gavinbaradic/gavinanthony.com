@@ -6,11 +6,18 @@ $base-color: #A3BED9;
   border-bottom: 1px solid $g7;
 }
 
+@mixin animate($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
 @mixin text-center {
   text-align: center;
 }
 
-@mixin clearfix() {
+@mixin clearfix {
   &:before,
   &:after {
     content: " ";

@@ -9,6 +9,7 @@ body {
   font-family: "Whitney", "Avenir", "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $base-color;
 }
 //  ———————————————————————————
 //  Basic Elements
@@ -18,6 +19,9 @@ a {
   @extend .f5;
   @extend .w3;
   @extend .no-underline;
+  &:hover {
+    @extend .g2;
+  }
 }
 h1 {
   @extend .g2;
@@ -37,6 +41,7 @@ a.button {
   @extend .g9;
   @extend .f6;
   @extend .w4;
+  @include animate(0.2s);
   width: auto;
   display: inline-block;
   background: $base-color;
@@ -46,6 +51,9 @@ a.button {
   text-transform: uppercase;
   &.button-hero {
     margin-bottom: 32px;
+  }
+  &:hover {
+    background: darken($base-color, 5%);
   }
 }
 ol.list, ul.list {
@@ -73,6 +81,9 @@ ol.list, ul.list {
 //  ———————————————————————————
 //  Layouts
 //  ———————————————————————————
+.wrapper {
+  background: white;
+}
 .container {
   @include outer-container();
   margin: 0 auto;
@@ -88,14 +99,32 @@ header {
     padding: 24px 0;
     &:last-child {
       @include pull-right;
-      li {
-        padding: 6px 0;
-      }
     }
     li {
       margin: 0 12px;
-      a {
-        letter-spacing: .5px;
+      padding: 6px 0;
+      &:first-of-type {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+footer {
+  margin-top: 32px;
+  background: $g8;
+  nav {
+    @include unstyled-list();
+    @include horizontal-list();
+    padding: 24px 0;
+    &:last-child {
+      @include pull-right;
+    }
+    li {
+      margin: 0 12px;
+      padding: 6px 0;
+      &:first-of-type {
+        margin: 0;
       }
     }
   }
