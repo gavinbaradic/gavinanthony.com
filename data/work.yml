@@ -4,6 +4,8 @@ clients:
     current: "current"
   - name: "Taplet/Joyspace"
     date: "2014–2015"
+  - name: "Gener8tor"
+    date: "2013–2014"
   - name: "Beekeeper Data"
     date: "2014"
   - name: "Wemontage"

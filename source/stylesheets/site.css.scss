@@ -37,6 +37,7 @@ a {
   @extend .f5;
   @extend .w3;
   @extend .no-underline;
+  @include animate(0.2s);
   &:hover {
     @extend .g2;
   }
