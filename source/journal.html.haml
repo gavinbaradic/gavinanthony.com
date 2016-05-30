@@ -1,0 +1,10 @@
+---
+title: Journal
+---
+%h1 Random Writings
+%h2 Articles
+%ul.list
+  - blog.articles[0...5].each do |article|
+    %li
+      = link_to article.title, article.url
+      %span= article.date.strftime('%b %e %Y')
