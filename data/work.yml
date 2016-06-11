@@ -2,6 +2,7 @@ clients:
   - name: "Likeli"
     date: "2015–Present"
     current: "current"
+    description: "blah blah blah"
   - name: "Taplet/Joyspace"
     date: "2014–2015"
   - name: "Gener8tor"
@@ -13,6 +14,8 @@ clients:
   - name: "Optyn"
     date: "2013"
 freelance:
+  - name: "Poparazzi"
+    date: "2015–2016"
   - name: "Kioh"
     date: "2015"
   - name: "Sun Sport Marine"

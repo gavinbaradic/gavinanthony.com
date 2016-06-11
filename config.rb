@@ -34,3 +34,8 @@ configure :build do
   activate :minify_javascript
   activate :gzip
 end
+
+data.work.clients.each do |client|
+  slug = client.name.delete(' ').downcase
+  proxy "/work/#{slug}/index.html", "/projects.html", :locals => { :client => client }, :ignore => true
+end
