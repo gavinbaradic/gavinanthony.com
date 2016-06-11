@@ -22,10 +22,18 @@ end
 
 activate :directory_indexes
 
-activate :blog do |journal|
-  journal.prefix = "journal"
-  journal.permalink = "{title}"
-  journal.layout = "blog"
+activate :blog do |blog|
+  blog.name       = "work"
+  blog.prefix     = "work"
+  blog.permalink  = "{title}"
+  blog.layout     = "work"
+end
+
+activate :blog do |blog|
+  blog.name       = "journal"
+  blog.prefix     = "journal"
+  blog.permalink  = "{title}"
+  blog.layout     = "journal"
 end
 
 configure :build do
@@ -33,9 +41,4 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :gzip
-end
-
-data.work.clients.each do |client|
-  slug = client.name.delete(' ').downcase
-  proxy "/work/#{slug}/index.html", "/projects.html", :locals => { :client => client }, :ignore => true
 end
