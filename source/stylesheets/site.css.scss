@@ -4,6 +4,7 @@
 @import "neat/neat";
 @import "typography";
 @import "variables";
+@import "base";
 
 body {
   font-family: "din pro", "Avenir", "Helvetica", sans-serif;
@@ -28,92 +29,6 @@ body {
 }
 .full {
   @include span-columns(12);
-}
-//  ———————————————————————————
-//  Basic Elements
-//  ———————————————————————————
-a {
-  @extend .g4;
-  @extend .f5;
-  @extend .w3;
-  @extend .no-underline;
-  @include animate(0.2s);
-  &:hover {
-    @extend .g2;
-  }
-}
-img {
-  width: 100%;
-  display: block;
-  &.half {
-    width: 50%;
-  }
-}
-h1 {
-  @extend .g2;
-  @extend .f3;
-  @extend .w3;
-  @extend .l15;
-  margin: 72px 0 48px 0;
-}
-h2 {
-  @extend .g2;
-  @extend .f5;
-  @extend .w3;
-  @extend .l15;
-  margin: 32px 0 8px 0;
-}
-p {
-  @extend .g3;
-  @extend .f5;
-  @extend .w3;
-  @extend .l15;
-  max-width: 30rem;
-  margin-bottom: 20px;
-}
-a.button {
-  @extend .g9;
-  @extend .f6;
-  @extend .w4;
-  @include animate(0.2s);
-  width: auto;
-  display: inline-block;
-  background: $base-color;
-  padding: 12px 16px 14px 16px;
-  border-radius: 100px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  &.button-hero {
-    margin-bottom: 32px;
-  }
-  &:hover {
-    background: darken($base-color, 5%);
-  }
-  &:active {
-    background: darken($base-color, 10%);
-  }
-}
-ol.list, ul.list {
-  li {
-    margin: 6px 0;
-    color: #0BD994;
-    &.current {
-      list-style: disc;
-    }
-    a {
-      @extend .g3;
-      @extend .f5;
-      @extend .w4;
-      display: inline-block;
-      padding: 5px 0;
-      border-bottom: 1px solid $g5;
-    }
-    span {
-      @extend .g5;
-      @extend .f5;
-      @extend .w4;
-    }
-  }
 }
 //  ———————————————————————————
 //  Page specific

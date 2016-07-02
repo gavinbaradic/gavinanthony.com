@@ -6,6 +6,10 @@ $base-color: #A3BED9;
   border-bottom: 1px solid $g7;
 }
 
+.r-f { border-radius: 100px; }
+.r-m { border-radius: 10px; }
+.r-s { border-radius: 3px; }
+
 @mixin animate($time) {
   -webkit-transition: all $time ease-in-out;
   -moz-transition: all $time ease-in-out;
