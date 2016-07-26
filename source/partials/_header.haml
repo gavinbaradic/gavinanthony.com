@@ -4,9 +4,9 @@
       %ul
         %li
           = link_to '/' do
-            = image_tag '/images/logo.svg'
+            = partial '/images/logo.svg'
     %nav.left
       %ul
         - data.navigation.header.each do | link |
           %li
-            = link_to link.title, link.link
+            = link_to link.title, link.link, nav_active(link.link)
