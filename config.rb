@@ -15,8 +15,8 @@ activate :deploy do |deploy|
 end
 
 helpers do
-  def is_page_active(page)
-    current_page.url == page ? {:class => 'active'} : {}
+  def nav_active(path)
+    current_page.url == path ? {:class => "active"} : {}
   end
 end
 
