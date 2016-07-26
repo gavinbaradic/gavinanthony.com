@@ -7,11 +7,14 @@
 @import "base";
 
 body {
-  font-family: "din pro", "Avenir", "Helvetica", sans-serif;
+  font-family: "Din Pro", "Avenir", "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $base-color;
   overflow-y: scroll;
+}
+::selection {
+  background: lighten($base-color, 20%);
 }
 //  ———————————————————————————
 //  Layouts
@@ -45,9 +48,33 @@ header {
     li {
       margin: 0 12px;
       padding: 6px 0;
+      position: relative;
       &:first-of-type {
         margin: 0;
         padding: 0;
+      }
+      a {
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        color: darken($base-color, 10%);
+        &:hover {
+          color: darken($base-color, 20%);
+        }
+        &.active:before {
+          content: " ";
+          background: lighten($alt-color, 10%);
+          width: 120%;
+          padding: 5px;
+          bottom: -5px;
+          left: -10%;
+          border-radius: 3px;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      svg g g {
+        fill: $base-color;
       }
     }
   }
