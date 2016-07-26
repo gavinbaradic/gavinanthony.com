@@ -1,8 +1,8 @@
 header:
-  - title: "About Me"
-    link: "/about"
-  - title: "Journal"
-    link: "/journal"
+  - title: "About"
+    link: "/about/"
+  - title: "Thoughts"
+    link: "/journal/"
 footer:
   - title: "Dribbble"
     link: "http://dribbble.com/gavinanthony"
