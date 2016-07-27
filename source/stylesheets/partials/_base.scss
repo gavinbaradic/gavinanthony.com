@@ -18,6 +18,15 @@ img {
     width: 50%;
   }
 }
+figure {
+  figcaption {
+    @extend .g2;
+    @extend .f5;
+    @extend .w3;
+    @extend .l15;
+    margin: 5px 0;
+  }
+}
 h1 {
   @extend .g2;
   @extend .f3;
@@ -35,6 +44,13 @@ h2 {
   @extend .l15;
   margin: 32px 0 8px 0;
 }
+h3 {
+  @extend .g2;
+  @extend .f5;
+  @extend .w4;
+  @extend .l15;
+  margin: 6px 0;
+}
 p {
   @extend .g3;
   @extend .f5;
@@ -42,6 +58,15 @@ p {
   @extend .l15;
   max-width: 30rem;
   margin-bottom: 20px;
+}
+hr {
+  border: none;
+  background: $g7;
+  height: 1px;
+  &.full {
+    margin: 32px auto;
+    width: 100%;
+  }
 }
 a.button {
   @extend .g9;
@@ -65,19 +90,20 @@ a.button {
     background: darken($base-color, 10%);
   }
 }
-ol.list, ul.list {
+ul.list {
   li {
-    margin: 6px 0;
-    color: #0BD994;
+    @extend .g2;
+    @extend .f5;
+    @extend .w3;
+    @extend .l15;
+    margin: 12px 0;
     &.current {
+      color: #66FFB3;
       list-style: disc;
     }
     a {
-      @extend .g3;
-      @extend .f5;
-      @extend .w4;
+      @extend .g2;
       display: inline-block;
-      padding: 5px 0;
       border-bottom: 1px solid $g5;
     }
     span {

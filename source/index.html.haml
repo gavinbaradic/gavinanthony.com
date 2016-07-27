@@ -5,15 +5,22 @@ title: Gavin Anthony
   Product designer from Milwaukee, WI.<br>
   Currently leading design at Likeli in Wilmington, NC.
 = link_to 'Get in touch', '/about.html', :class => 'button button-hero'
-%h2 My Work
-%ul.list
-  - data.work.clients.each do | client |
-    %li{:class => client.current}
-      = link_to client.name, client.link, :target => '_blank'
-      %span=client.date
-%h2 Freelance
-%ul.list
-  - data.work.freelance.each do | client |
-    %li
-      = link_to client.name, '/work' + '/' + client.name.delete(' ').downcase
-      %span=client.date
+-# %hr.full
+.textblock
+  %aside
+    %h3 My Work
+  %aside
+    %ul.list
+      - data.work.clients.each do | client |
+        %li{:class => client.current}
+          = link_to client.name, client.link, :target => '_blank'
+          %span=client.date
+.textblock
+  %aside
+    %h3 Freelance
+  %aside
+    %ul.list
+      - data.work.freelance.each do | client |
+        %li
+          = link_to client.name, '/work' + '/' + client.name.delete(' ').downcase
+          %span=client.date
