@@ -1,6 +1,6 @@
 ---
 title: Likeli
 date: 2016-06-11 18:10 UTC
-tags:
+tags: ios, web, brand
+role: Lead Designer
 ---
-
