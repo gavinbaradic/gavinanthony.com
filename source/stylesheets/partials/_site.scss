@@ -65,7 +65,7 @@ header {
         }
         &.active:before {
           content: " ";
-          background: lighten($alt-color, 10%);
+          background: lighten($alt-color, 15%);
           width: 120%;
           padding: 4px;
           bottom: -2px;
