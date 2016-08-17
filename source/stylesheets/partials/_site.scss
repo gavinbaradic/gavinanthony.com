@@ -2,6 +2,7 @@ body {
   font-family: "Din Pro", "Avenir", "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   background: $base-color;
   overflow-y: scroll;
 }
