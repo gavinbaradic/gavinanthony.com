@@ -10,6 +10,10 @@ a {
   &:hover {
     @extend .g2;
   }
+  &.name {
+    @extend .f4;
+    @extend .w4;
+  }
 }
 img {
   width: 100%;
@@ -29,20 +33,17 @@ figure {
 }
 h1 {
   @extend .g2;
-  @extend .f3;
+  @extend .f2;
   @extend .w3;
   @extend .l15;
-  // font-size: 36px;
-  // font-family: "FarnhamText";
-  // font-weight: "700";
-  margin: 72px 0 48px 0;
+  @extend .farnham;
+  // text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
 }
 h2 {
   @extend .g2;
   @extend .f5;
   @extend .w3;
   @extend .l15;
-  margin: 32px 0 8px 0;
 }
 h3 {
   @extend .g2;
@@ -92,23 +93,32 @@ a.button {
 }
 ul.list {
   li {
-    @extend .g2;
-    @extend .f5;
-    @extend .w3;
-    @extend .l15;
-    margin: 12px 0;
+    margin: .75rem 0 .7rem 0;
     &.current {
-      color: #33FFBB;
+      color: #8AB3E6;
       list-style: disc;
     }
+    &.title {
+      display: block;
+      margin-top: 5vh;
+      @extend .g5;
+      @extend .f4;
+      @extend .w4;
+    }
     a {
-      @extend .g2;
+      @extend .g4;
+      @extend .f4;
+      @extend .w4;
       display: inline-block;
-      border-bottom: 1px solid $g5;
+      padding-bottom: 5px;
+      border-bottom: 1px solid white;
+      &[href*='http']:hover {
+        border-bottom: 1px solid $g4;
+      }
     }
     span {
       @extend .g5;
-      @extend .f5;
+      @extend .f4;
       @extend .w4;
     }
   }

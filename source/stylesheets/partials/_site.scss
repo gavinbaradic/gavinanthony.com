@@ -1,13 +1,14 @@
 body {
-  font-family: "Din Pro", "Avenir", "Helvetica", sans-serif;
+  font-family: "Affogato-Medium", "Avenir", "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: $base-color;
+  background: white;
   overflow-y: scroll;
 }
 ::selection {
   background: lighten($base-color, 10%);
+  color: white;
 }
 //  ———————————————————————————
 //  Layouts
@@ -18,6 +19,7 @@ body {
 }
 .container {
   @include outer-container;
+  padding: 0 20px;
   margin: 0 auto;
   header & {
     @extend .border-bottom;
@@ -40,51 +42,11 @@ body {
 //  Page specific
 //  ———————————————————————————
 header {
-  background: white;
-  nav {
-    @include unstyled-list();
-    @include horizontal-list();
-    padding: 24px 0;
-    &:last-child {
-      @include pull-right;
-    }
-    li {
-      margin: 0 12px;
-      padding: 6px 0;
-      position: relative;
-      &:first-of-type {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        position: relative;
-        z-index: 1;
-        font-weight: 500;
-        color: darken($base-color, 10%);
-        &:hover {
-          color: darken($base-color, 20%);
-        }
-        &.active:before {
-          content: " ";
-          background: lighten($alt-color, 15%);
-          width: 120%;
-          padding: 4px;
-          bottom: -2px;
-          left: -10%;
-          border-radius: 3px;
-          position: absolute;
-          z-index: -1;
-        }
-      }
-      svg g g {
-        fill: $base-color;
-      }
-    }
-  }
+  margin: 30vh 0;
 }
 footer {
   margin-top: 32px;
-  background: $g8;
+  background: white;
   nav {
     @include unstyled-list();
     @include horizontal-list();

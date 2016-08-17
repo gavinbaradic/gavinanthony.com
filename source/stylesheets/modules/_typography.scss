@@ -1,3 +1,5 @@
+@include font-face(Affogato-Regular, fonts/Affogato-Regular);
+@include font-face(Affogato-Medium, fonts/Affogato-Medium);
 // Grey Colors
 .g1 { color: #263140; }
 .g2 { color: #3A4859; }
@@ -18,7 +20,7 @@ $g7: #F7F8FA;
 $g8: #F7F9FA;
 $g9: #FFFFFF;
 // Type Scale
-.f1 { font-size: 3rem; }
+.f1 { font-size: 2.75rem; }
 .f2 { font-size: 2.25rem; }
 .f3 { font-size: 1.5rem; }
 .f4 { font-size: 1.25rem; }
@@ -65,4 +67,9 @@ $g9: #FFFFFF;
 }
 .underline {
   text-decoration: underline;
+}
+.farnham {
+  font-family: "Farnham Headline Reg";
+  font-style: Normal;
+  font-weight: Normal;
 }
