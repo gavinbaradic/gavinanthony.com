@@ -2,7 +2,6 @@ clients:
   - name: "Likeli"
     date: "2015–Present"
     current: "current"
-    description: "blah blah blah"
     link: "http://likeli.co"
   - name: "Taplet/Joyspace"
     date: "2014–2015"
