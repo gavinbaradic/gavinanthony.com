@@ -29,13 +29,6 @@ activate :blog do |blog|
   blog.layout     = "work"
 end
 
-activate :blog do |blog|
-  blog.name       = "journal"
-  blog.prefix     = "journal"
-  blog.permalink  = "{title}"
-  blog.layout     = "journal"
-end
-
 configure :build do
   activate :asset_hash
   activate :minify_css
