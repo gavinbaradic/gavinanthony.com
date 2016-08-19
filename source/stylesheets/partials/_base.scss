@@ -112,7 +112,7 @@ ul.list {
       display: inline-block;
       padding-bottom: 5px;
       border-bottom: 1px solid white;
-      &[href*='http']:hover {
+      &:hover {
         border-bottom: 1px solid $g4;
       }
     }
