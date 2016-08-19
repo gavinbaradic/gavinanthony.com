@@ -1,12 +1,3 @@
 %header
-  %div.container
-    %nav.left
-      %ul
-        %li
-          = link_to '/' do
-            = partial '/images/logo.svg'
-    %nav.left
-      %ul
-        - data.navigation.header.each do | link |
-          %li
-            = link_to link.title, link.link, nav_active(link.link)
+  %a.name{:href => "/"} Gavin Anthony
+  %h1= current_page.data.client || "Product designer from Milwaukee, WI.<br>Currently leading design at Likeli in Wilmington, NC."

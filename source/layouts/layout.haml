@@ -9,7 +9,7 @@
     = javascript_include_tag :all
   %body{ :class => page_classes}
     %div.wrapper
-      -# = partial "partials/header"
       %div.container
+        = partial "partials/header"
         = yield
       = partial "partials/footer"

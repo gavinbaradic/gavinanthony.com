@@ -1,11 +1,6 @@
 ---
 title: Gavin Anthony
 ---
-%header
-  %a.name Gavin Anthony
-  %h1
-    Product designer from Milwaukee, WI.<br>
-    Currently leading design at Likeli in Wilmington, NC.
 %ul.list
   %li.title Selected Work
   - data.work.clients.each do | client |
@@ -16,6 +11,5 @@ title: Gavin Anthony
   %li.title Freelance Work
   - data.work.freelance.each do | client |
     %li
-      -# = link_to client.name, '/work' + '/' + client.name.delete(' ').downcase
-      %a= client.name
+      = link_to client.name, '/work' + '/' + client.name.delete(' ').downcase
       %span=client.date
