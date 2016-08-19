@@ -18,6 +18,9 @@ helpers do
   def nav_active(path)
     current_page.url == path ? {:class => "active"} : {}
   end
+  def work_slug(name)
+    name.split(' ').first.split('/').first.downcase
+  end
 end
 
 activate :directory_indexes

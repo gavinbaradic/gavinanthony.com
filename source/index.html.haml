@@ -5,11 +5,11 @@ title: Gavin Anthony
   %li.title Selected Work
   - data.work.clients.each do | client |
     %li{:class => client.current}
-      = link_to client.name, client.link, :target => '_blank'
+      = link_to client.name, '/work/' + work_slug(client.name)
       %span= client.date
 %ul.list
   %li.title Freelance Work
   - data.work.freelance.each do | client |
     %li
-      = link_to client.name, '/work/' + client.name.delete(' ').downcase
+      = link_to client.name, '/work/' + work_slug(client.name)
       %span= client.date
