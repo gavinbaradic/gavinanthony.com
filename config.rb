@@ -18,8 +18,11 @@ helpers do
   def nav_active(path)
     current_page.url == path ? {:class => "active"} : {}
   end
-  def work_slug(name)
-    name.split(' ').first.split('/').first.downcase
+  def work_slug(client)
+    internal_url = '/work/' + client.name.split(' ').first.split('/').first.downcase
+    client.url = client.external.nil? ? internal_url : client.link
+    client.target = client.external.nil? ? {} : {:target => "_blank"}
+    link_to client.name, client.url, client.target
   end
 end
 
