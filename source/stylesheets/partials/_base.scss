@@ -16,16 +16,19 @@ a {
   }
 }
 img {
-  width: 100%;
+  max-width: 100%;
   display: block;
   &.half {
     width: 50%;
   }
 }
 figure {
+  img {
+    border-radius: 5px;
+  }
   figcaption {
-    @extend .g2;
-    @extend .f5;
+    @extend .g4;
+    @extend .f4;
     @extend .w3;
     @extend .l15;
     margin: 5px 0;
