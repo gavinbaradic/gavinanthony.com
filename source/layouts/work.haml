@@ -10,5 +10,8 @@
     %div.wrapper
       %div.container
         = partial "partials/header"
+        %figure
+          = image_tag "work/#{current_page.data.title.downcase}/banner.jpg"
+          %figcaption= "The #{current_page.data.title} Logo"
         = yield
       = partial "partials/footer"

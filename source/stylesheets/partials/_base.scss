@@ -102,11 +102,13 @@ ul.list {
       list-style: disc;
     }
     &.title {
-      display: block;
-      margin-top: 5vh;
-      @extend .g5;
+      @extend .g4;
       @extend .f4;
       @extend .w4;
+      display: inline-block;
+      margin: 5vh 0 .2rem 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $g5;
     }
     a {
       @extend .g4;
@@ -116,7 +118,7 @@ ul.list {
       padding-bottom: 5px;
       border-bottom: 1px solid white;
       &:hover {
-        border-bottom: 1px solid $g4;
+        border-bottom: 1px solid $g5;
       }
     }
     span {
