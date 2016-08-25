@@ -13,5 +13,8 @@
         %figure
           = image_tag "work/#{current_page.data.title.downcase}/banner.jpg"
           %figcaption= "The #{current_page.data.title} Logo"
+        .info
+          -# = data.work.select{ |client, flag| client == current_page.data.title}\
+          = data.work.map {|a| a & current_page.data.title }
         = yield
       = partial "partials/footer"

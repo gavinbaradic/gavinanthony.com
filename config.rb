@@ -19,10 +19,10 @@ helpers do
     current_page.url == path ? {:class => "active"} : {}
   end
   def work_slug(client)
-    internal_url = '/work/' + client.name.split(' ').first.split('/').first.downcase
+    internal_url = '/work/' + client.title.downcase
     client.url = client.external.nil? ? internal_url : client.link
     client.target = client.external.nil? ? {} : {:target => "_blank"}
-    link_to client.name, client.url, client.target
+    link_to client.title, client.url, client.target
   end
 end
 

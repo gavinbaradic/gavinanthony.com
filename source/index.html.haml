@@ -3,13 +3,7 @@ title: Gavin Anthony
 ---
 %ul.list
   %li.title Selected Work
-  - data.work.clients.each do | client |
-    %li{:class => client.current}
-      = work_slug(client)
-      %span= client.date
-%ul.list
-  %li.title Freelance Work
-  - data.work.freelance.each do | client |
-    %li
-      = work_slug(client)
-      %span= client.date
+  - blog('work').articles.each do |client|
+    %li{:class => client.data.current}
+      = work_slug(client.data)
+      %span= client.data.time
