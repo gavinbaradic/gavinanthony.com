@@ -13,16 +13,16 @@ clients:
     details:
       role: "Product Designer"
       platform: "iOS"
-  - name: "Taplet"
+  - name: "Joyspace"
     date: "2014–2015"
-    link: "http://gotaplet.com/"
+    link: "http://myjoyspace.com/"
     details:
       role: "Product Designer"
       platform: "iOS"
       location: "Los Angeles, CA"
-  - name: "Joyspace"
+  - name: "Taplet"
     date: "2014–2015"
-    link: "http://myjoyspace.com/"
+    link: "http://gotaplet.com/"
     details:
       role: "Product Designer"
       platform: "iOS"
