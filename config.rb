@@ -24,6 +24,11 @@ helpers do
     client.target = client.external.nil? ? {} : {:target => "_blank"}
     link_to client.title, client.url, client.target
   end
+  def pages_by_category(category)
+    sitemap.resources.select do |resource|
+      resource.data.selected == category
+    end.sort_by(&:date).reverse
+  end
 end
 
 activate :directory_indexes
@@ -33,6 +38,7 @@ activate :blog do |blog|
   blog.prefix     = "work"
   blog.permalink  = "{title}"
   blog.layout     = "work"
+  blog.paginate   = true
 end
 
 configure :build do
