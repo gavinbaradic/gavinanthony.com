@@ -29,6 +29,9 @@ helpers do
       resource.data.selected == category
     end.sort_by(&:date).reverse
   end
+  def clean_url(url)
+    link_to url.sub(/^https?\:\/\//, '').sub(/^www./,''), url
+  end
 end
 
 activate :directory_indexes
