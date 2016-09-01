@@ -68,8 +68,17 @@ $g9: #FFFFFF;
 .underline {
   text-decoration: underline;
 }
+.inherit {
+  color: inherit;
+  font: inherit;
+}
 .farnham {
   font-family: "Farnham Headline Reg", "FarnhamDisplay";
+  font-style: Normal;
+  font-weight: Normal;
+}
+.affogato {
+  font-family: "Affogato-Medium", "Avenir", "Helvetica", sans-serif;
   font-style: Normal;
   font-weight: Normal;
 }
