@@ -7,7 +7,7 @@ a {
   @include animate(0.2s);
 
   &:hover {
-    color: $g2;
+    color: $g3;
   }
 }
 
@@ -66,7 +66,7 @@ hr {
     font-size: $medium-font-size;
 
     &.current {
-      color: lighten($base-color, 20%);
+      color: $g4;
       list-style: disc;
     }
 
@@ -84,7 +84,6 @@ hr {
     }
 
     a {
-      color: $g4;
       border-bottom: 1px solid $white;
     }
 
