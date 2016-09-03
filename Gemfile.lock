@@ -43,6 +43,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.4.4)
+    htmlcompressor (0.2.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     json (1.8.3)
@@ -96,6 +97,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     minitest (5.9.0)
     neat (1.7.4)
       bourbon (>= 4.0)
@@ -155,6 +159,7 @@ DEPENDENCIES
   middleman-blog
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload
+  middleman-minify-html
   neat
   rake
   rubocop
