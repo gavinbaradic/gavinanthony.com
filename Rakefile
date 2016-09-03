@@ -1,5 +1,7 @@
 require 'colorize'
 
+task default: :lint
+
 desc 'Lint ruby, haml, and scss'
 task lint: ['lint:ruby', 'lint:haml', 'lint:scss']
 
