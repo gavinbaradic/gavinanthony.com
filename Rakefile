@@ -24,12 +24,10 @@ namespace :lint do
 end
 
 namespace :deploy do
-  def deploy(env)
-    puts "Deploying to #{env}"
-    system "TARGET=#{env} bundle exec middleman deploy"
-  end
-
+  desc 'Deploy to netlify'
   task :production do
-    deploy :production
+    sh 'bundle exec middleman build'
+    sh 'netlify deploy'
+    puts 'Deployment was successful'.green
   end
 end
