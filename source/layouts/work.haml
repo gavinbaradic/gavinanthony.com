@@ -1,20 +1,19 @@
 !!! 5
 %html
   %head
-    %title= current_page.data.title || "Gavin Anthony"
-    %meta{ :charset => "utf-8" }
-    %meta{ :content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name=> "viewport" }
+    %title= current_page.data.title || 'Gavin Anthony'
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no', name: 'viewport' }
     = stylesheet_link_tag :site
     = javascript_include_tag :all
-  %body{ :class => page_classes}
-    %div.wrapper
-      %div.container
-        = partial "partials/header"
+  %body{ class: page_classes }
+    .wrapper
+      .container
+        = partial 'partials/header'
         %figure
           = image_tag "work/#{current_page.data.title.downcase}/banner.jpg"
-          %figcaption= "The #{current_page.data.title} Logo"
-        .info
-          -# = data.work.select{ |client, flag| client == current_page.data.title}\
-          = data.work.map {|a| a & current_page.data.title }
+        -# = partial 'partials/client-stats'
+        -# = current_article.previous_article.url
+        -# = current_article.next_article.url
         = yield
-      = partial "partials/footer"
+      = partial 'partials/footer'

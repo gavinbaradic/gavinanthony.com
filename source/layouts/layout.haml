@@ -1,15 +1,15 @@
 !!! 5
 %html
   %head
-    %title= current_page.data.title || "Gavin Anthony"
-    %meta{ :charset => "utf-8" }
-    %meta{ :content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name=> "viewport" }
-    %link{:href => "//cloud.typenetwork.com/projects/355/fontface.css/", :rel => "stylesheet", :type => "text/css"}
+    %title= current_page.data.title || 'Gavin Anthony'
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no', name: 'viewport' }
+    %link{ href: '//cloud.typenetwork.com/projects/355/fontface.css/', rel: 'stylesheet', type: 'text/css' }
     = stylesheet_link_tag :site
     = javascript_include_tag :all
-  %body{ :class => page_classes}
-    %div.wrapper
-      %div.container
-        = partial "partials/header"
+  %body{ class: page_classes }
+    .wrapper
+      .container
+        = partial 'partials/header'
         = yield
-      = partial "partials/footer"
+      = partial 'partials/footer'
