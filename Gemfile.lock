@@ -107,10 +107,14 @@ GEM
     rack (1.6.4)
     rack-livereload (0.3.16)
       rack
+    rake (11.2.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     sass (3.4.22)
+    scss_lint (0.50.2)
+      rake (>= 0.9, < 12)
+      sass (~> 3.4.20)
     servolux (0.12.0)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -130,6 +134,7 @@ DEPENDENCIES
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload
   neat
+  scss_lint
 
 BUNDLED WITH
    1.12.5

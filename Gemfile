@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
-
-# Middleman Gems
 gem "middleman"
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
 gem 'middleman-livereload'
 gem 'middleman-blog'
-
-# SASS Libraries
+gem 'scss_lint', require: false
 gem 'bourbon'
 gem 'neat'

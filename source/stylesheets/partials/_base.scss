@@ -2,129 +2,98 @@
 //  Basic Elements
 //  ———————————————————————————
 a {
-  @extend .g4;
-  @extend .f5;
-  @extend .w3;
-  @extend .no-underline;
+  color: $g4;
+  font-weight: 300;
   @include animate(0.2s);
+
   &:hover {
-    @extend .g2;
-  }
-  &.name {
-    @extend .f4;
-    @extend .w4;
+    color: $g2;
   }
 }
+
 img {
   max-width: 100%;
   display: block;
+
   &.half {
     width: 50%;
   }
 }
+
 figure {
   img {
     border-radius: 5px;
   }
+
   figcaption {
-    @extend .g4;
-    @extend .f4;
-    @extend .w3;
-    @extend .l15;
+    color: $g4;
     margin: 5px 0;
+    font-weight: 400;
+    font-size: $medium-font-size;
   }
 }
+
 h1 {
-  @extend .g2;
-  @extend .f2;
-  @extend .w3;
-  @extend .l15;
-  @extend .farnham;
-  // text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  color: $g2;
+  @include headline;
 }
+
 h2 {
-  @extend .g2;
-  @extend .f5;
-  @extend .w3;
-  @extend .l15;
+  color: $g2;
+  font-weight: 400;
 }
-h3 {
-  @extend .g2;
-  @extend .f5;
-  @extend .w4;
-  @extend .l15;
-  margin: 6px 0;
-}
+
 p {
-  @extend .g3;
-  @extend .f5;
-  @extend .w3;
-  @extend .l15;
+  color: $g3;
   max-width: 30rem;
   margin-bottom: 20px;
 }
+
 hr {
-  border: none;
+  border: 0;
   background: $g7;
   height: 1px;
+
   &.full {
     margin: 32px auto;
     width: 100%;
   }
 }
-a.button {
-  @extend .g9;
-  @extend .f6;
-  @extend .w4;
-  @include animate(0.2s);
-  width: auto;
-  display: inline-block;
-  background: $base-color;
-  padding: 12px 16px 14px 16px;
-  border-radius: 100px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  &.button-hero {
-    margin-bottom: 32px;
-  }
-  &:hover {
-    background: darken($base-color, 5%);
-  }
-  &:active {
-    background: darken($base-color, 10%);
-  }
-}
-ul.list {
+
+.list {
   li {
-    margin: .75rem 0 .7rem 0;
+    margin: .5rem 0;
+    font-size: $medium-font-size;
+
     &.current {
-      color: #8AB3E6;
+      color: lighten($base-color, 20%);
       list-style: disc;
     }
+
     &.title {
-      @extend .g4;
-      @extend .f4;
-      @extend .w4;
+      color: $g4;
       display: inline-block;
-      margin: 5vh 0 .2rem 0;
+      margin: 5vh 0 .2rem;
       padding-bottom: 5px;
       border-bottom: 1px solid $g5;
     }
-    a {
-      @extend .g4;
-      @extend .f4;
-      @extend .w4;
+
+    * {
       display: inline-block;
       padding-bottom: 5px;
-      border-bottom: 1px solid white;
-      &:hover {
-        border-bottom: 1px solid $g5;
-      }
     }
+
+    a {
+      color: $g4;
+      border-bottom: 1px solid $white;
+    }
+
+    a:hover {
+      border-bottom: 1px solid $g5;
+    }
+
     span {
-      @extend .g5;
-      @extend .f4;
-      @extend .w4;
+      color: $g5;
     }
   }
 }

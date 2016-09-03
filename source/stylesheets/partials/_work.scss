@@ -1,3 +1,27 @@
 .info {
-  
+  margin-top: 20px;
+
+  h1 {
+    color: $g3;
+    font-family: $sans-serif;
+    font-size: $medium-font-size;
+
+    a {
+      @include inherit-style;
+    }
+  }
+
+  h2 {
+    color: $g4;
+    font-size: $medium-font-size;
+  }
+
+  .stat {
+    @include span-columns(3);
+    border-right: 1px solid $g5;
+
+    &:last-child {
+      border: 0;
+    }
+  }
 }

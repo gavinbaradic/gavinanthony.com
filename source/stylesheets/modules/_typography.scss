@@ -1,84 +1,39 @@
-@include font-face(Affogato-Regular, fonts/Affogato-Regular);
-@include font-face(Affogato-Medium, fonts/Affogato-Medium);
+@include font-face(Affogato-Regular, "fonts/Affogato-Regular");
+@include font-face(Affogato-Medium, "fonts/Affogato-Medium");
 // Grey Colors
-.g1 { color: #263140; }
-.g2 { color: #3A4859; }
-.g3 { color: #4F5D70; }
-.g4 { color: #7A8899; }
-.g5 { color: #CACFD5; }
-.g6 { color: #F0F1F3; }
-.g7 { color: #F7F8FA; }
-.g8 { color: #F7F9FA; }
-.g9 { color: #FFFFFF; }
 $g1: #263140;
-$g2: #3A4859;
-$g3: #4F5D70;
-$g4: #7A8899;
-$g5: #CACFD5;
-$g6: #F0F1F3;
-$g7: #F7F8FA;
-$g8: #F7F9FA;
-$g9: #FFFFFF;
-// Type Scale
-.f1 { font-size: 2.75rem; }
-.f2 { font-size: 2.25rem; }
-.f3 { font-size: 1.5rem; }
-.f4 { font-size: 1.25rem; }
-.f5 { font-size: 1rem; }
-.f6 { font-size: .875rem; }
-// Type Weight
-.w1 { font-weight: 200; }
-.w2 { font-weight: 300; }
-.w3 { font-weight: 400; }
-.w4 { font-weight: 500; }
-.w5 { font-weight: 600; }
-// Line Height
-.l1 { line-height: 1; }
-.l15 { line-height: 1.5; }
-.l2 { line-height: 2; }
-// Responsive Typo
-@media screen and (min-width: 48em) {
- .f1-ns { font-size: 3rem; }
- .f2-ns { font-size: 2.25rem; }
- .f3-ns { font-size: 1.5rem; }
- .f4-ns { font-size: 1.25rem; }
- .f5-ns { font-size: 1rem; }
- .f6-ns { font-size: .875rem; }
+$g2: #3a4859;
+$g3: #4f5d70;
+$g4: #7a8899;
+$g5: #cacfd5;
+$g6: #f0f1f3;
+$g7: #f7f8fa;
+$g8: #f7f9fa;
+$white: #fff;
+
+$base-font-size: 1rem;
+$medium-font-size: 1.25rem;
+$headline-font-size: 2.25rem;
+
+@mixin base-font-styles {
+  color: $base-color;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  font-family: $sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
-@media screen and (min-width: 48em) and (max-width: 64em) {
- .f1-m { font-size: 3rem; }
- .f2-m { font-size: 2.25rem; }
- .f3-m { font-size: 1.5rem; }
- .f4-m { font-size: 1.25rem; }
- .f5-m { font-size: 1rem; }
- .f6-m { font-size: .875rem; }
+
+@mixin headline {
+  color: $g2;
+  font-family: $serif;
+  font-size: $headline-font-size;
+  font-weight: 400;
 }
-@media screen and (min-width: 64em) {
- .f1-l { font-size: 3rem; }
- .f2-l { font-size: 2.25rem; }
- .f3-l { font-size: 1.5rem; }
- .f4-l { font-size: 1.25rem; }
- .f5-l { font-size: 1rem; }
- .f6-l { font-size: .875rem; }
-}
-// Generic Text Styles
-.no-underline {
-  text-decoration: none;
-}
-.underline {
-  text-decoration: underline;
-}
-.inherit {
+
+@mixin inherit-style {
   color: inherit;
   font: inherit;
-}
-.farnham {
-  font-family: "Farnham Headline Reg", "FarnhamDisplay";
-  font-style: Normal;
-  font-weight: Normal;
-}
-.affogato {
-  font-family: "Affogato-Medium", "Avenir", "Helvetica", sans-serif;
-  font-style: Normal;
-  font-weight: Normal;
 }
