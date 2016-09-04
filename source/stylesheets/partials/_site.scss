@@ -20,12 +20,17 @@ body {
   padding: 0 20px;
   margin: 0 auto;
   @include outer-container;
+
+  &.large {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 //  ———————————————————————————
 //  Page specific
 //  ———————————————————————————
 header {
-  margin: 30vh 0;
+  margin: 25vh 0 20vh;
 
   .name {
     font-size: $medium-font-size;

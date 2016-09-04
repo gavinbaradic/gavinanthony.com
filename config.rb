@@ -45,4 +45,24 @@ helpers do
   def clean_url(url)
     link_to url.sub(%r{https?://}, '').sub(/^www./, ''), url
   end
+
+  def page_title
+    current_article.data.title.downcase
+  end
+
+  def work_screens_root(client)
+    "images/work/#{client}/screens/"
+  end
+
+  def work_get_screen_images(client)
+    Dir.entries("source/#{work_screens_root(client)}").reject { |entry| entry == '.' || entry == '..' }.sort_by(&:to_i)
+  end
+
+  def work_image_tag(client, filename)
+    image_tag "#{work_screens_root(client)}#{filename.sub(' ', '%20')}"
+  end
+
+  def work_get_title(filename)
+    filename.gsub(/[^a-zA-Z. ]/, '').sub('.png', '').sub('.jpg', '').sub('.jpeg', '')
+  end
 end

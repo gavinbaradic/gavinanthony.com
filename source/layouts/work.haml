@@ -12,8 +12,8 @@
         = partial 'partials/header'
         %figure
           = image_tag "work/#{current_page.data.title.downcase}/banner.jpg"
-        -# = partial 'partials/client-stats'
+        = partial 'partials/client-stats'
         -# = current_article.previous_article.url
         -# = current_article.next_article.url
-        = yield
+      = yield
       = partial 'partials/footer'

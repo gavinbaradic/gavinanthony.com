@@ -1,3 +1,7 @@
+.imagerow {
+  margin: 20px 0;
+}
+
 .info {
   margin-top: 20px;
 
@@ -17,8 +21,9 @@
   }
 
   .stat {
-    @include span-columns(3);
-    border-right: 1px solid $g5;
+    @include media($desktop) {
+      border-right: 1px solid $g5;
+    }
 
     &:last-child {
       border: 0;
