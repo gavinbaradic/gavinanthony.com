@@ -50,16 +50,15 @@ helpers do
     current_article.data.title.downcase
   end
 
-  def work_screens_root(client)
-    "images/work/#{client}/screens/"
+  def work_get_screen_images(client, directory = nil)
+    Dir.entries("source/images/work/#{client}/screens/#{directory}").
+      reject { |e| e == '.' || e == '..' || e == '.DS_Store' }.
+      sort_by(&:to_i)
   end
 
-  def work_get_screen_images(client)
-    Dir.entries("source/#{work_screens_root(client)}").reject { |entry| entry == '.' || entry == '..' }.sort_by(&:to_i)
-  end
-
-  def work_image_tag(client, filename)
-    image_tag "#{work_screens_root(client)}#{filename.sub(' ', '%20')}"
+  def work_image_tag(client, filename, directory = nil)
+    directory.blank? ? directory : directory += '/'
+    image_tag "/images/work/#{client}/screens/#{directory}#{filename.gsub(' ', '%20')}"
   end
 
   def work_get_title(filename)

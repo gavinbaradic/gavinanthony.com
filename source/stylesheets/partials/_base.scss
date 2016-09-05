@@ -39,8 +39,18 @@ h1 {
 }
 
 h2 {
-  color: $g2;
+  color: $g4;
   font-weight: 400;
+  font-size: $medium-font-size;
+}
+
+h3 {
+  color: $g3;
+  font-weight: 400;
+  font-size: $medium-font-size;
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $g5;
 }
 
 p {

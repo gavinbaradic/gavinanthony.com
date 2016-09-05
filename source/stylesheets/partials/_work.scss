@@ -1,5 +1,21 @@
 .imagerow {
   margin: 20px 0;
+
+  h1 {
+    color: $g4;
+    margin: 5px 0;
+    font-weight: 400;
+    font-family: $sans-serif;
+    font-size: $medium-font-size;
+  }
+
+  img {
+    border: 1px solid $g6;
+  }
+}
+
+.s-heading {
+  margin-top: 5rem;
 }
 
 .info {
