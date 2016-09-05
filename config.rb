@@ -1,12 +1,8 @@
-activate :directory_indexes
-
-configure :development do
-  activate :livereload
-end
-
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+activate :directory_indexes
 
 activate :blog do |blog|
   blog.name       = 'work'
@@ -14,6 +10,14 @@ activate :blog do |blog|
   blog.permalink  = '{title}'
   blog.layout     = 'work'
   blog.paginate   = true
+end
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-83701510-1'
+end
+
+configure :development do
+  activate :livereload
 end
 
 configure :build do

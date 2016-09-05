@@ -9,3 +9,4 @@
         - data.navigation.footer.each do |link|
           %li
             = link_to link.title, link.link, target: '_blank'
+= google_analytics_tag if build?

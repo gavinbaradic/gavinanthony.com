@@ -93,6 +93,11 @@ GEM
       servolux
       tilt (~> 1.4.1)
       uglifier (~> 3.0)
+    middleman-google-analytics (2.1.1)
+      activesupport (~> 4.1)
+      erubis
+      middleman-core (>= 3.4)
+      uglifier (>= 2.5, < 4.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -155,6 +160,7 @@ DEPENDENCIES
   hamlit
   middleman
   middleman-blog
+  middleman-google-analytics (~> 2.1)
   middleman-livereload
   middleman-minify-html
   neat
