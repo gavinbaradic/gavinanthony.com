@@ -47,7 +47,7 @@ helpers do
   end
 
   def clean_url(url)
-    link_to url.sub(%r{https?://}, '').sub(/^www./, ''), url
+    link_to url.sub(%r{https?://}, '').sub(/^www./, ''), url, target: '_blank'
   end
 
   def page_title
