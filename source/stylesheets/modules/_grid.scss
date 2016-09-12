@@ -12,6 +12,10 @@ $desktop: new-breakpoint(min-width 720px);
   @include omega(1);
 }
 
+.col-1-2 {
+  @include span-columns(6);
+}
+
 .col-1-3 {
   @include span-columns(4);
 }
