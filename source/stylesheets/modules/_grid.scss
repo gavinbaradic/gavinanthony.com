@@ -2,6 +2,10 @@ $mobile: new-breakpoint(max-width 720px);
 $desktop: new-breakpoint(min-width 720px);
 
 .omega {
+  .col-1-2 {
+    @include omega(2n);
+  }
+
   .col-1-4 {
     @include omega(4n);
   }
