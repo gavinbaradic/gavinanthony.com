@@ -1,6 +1,29 @@
+.textrow,
 .imagerow {
-  margin: 20px 0;
+  [class^='col'] {
+    margin-top: 20px;
+  }
+}
 
+.textrow {
+  h1 {
+    color: $g3;
+    margin: 5px 0;
+    font-weight: 400;
+    font-family: $sans-serif;
+    font-size: $medium-font-size;
+  }
+
+  p {
+    color: $g4;
+    margin: 5px 0;
+    font-weight: 400;
+    font-family: $sans-serif;
+    font-size: $medium-font-size;
+  }
+}
+
+.imagerow {
   h1 {
     color: $g4;
     margin: 5px 0;
@@ -38,7 +61,7 @@
 
   .stat {
     @include media($desktop) {
-      border-right: 1px solid $g5;
+      border-right: 1px solid $g6;
     }
 
     &:last-child {

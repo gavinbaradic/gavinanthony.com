@@ -60,8 +60,9 @@ p {
 }
 
 hr {
+  margin: 20px auto;
   border: 0;
-  background: $g7;
+  background: $g6;
   height: 1px;
 
   &.full {

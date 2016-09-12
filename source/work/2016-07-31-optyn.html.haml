@@ -10,3 +10,20 @@ role: Designer
 platform: web
 location: Milwaukee, WI
 ---
+.container
+  %hr
+  .textrow
+    %div
+      %h1 Intro
+      %p
+        While working at Optyn, I was assigned to work on the redesign of the
+        home page, the Google Chrome extension and the design/development of a merchant mobile website.
+.container.large
+  .col-1-1.s-heading
+    %h3 Desktop Home Page
+  .imagerow.omega
+    - work_get_screen_images(page_title).each do |image_file|
+      .col-1-1
+        %figure
+          = work_image_tag(page_title, image_file)
+          %figcaption= work_get_title(image_file)

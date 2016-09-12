@@ -17,8 +17,6 @@ $desktop: new-breakpoint(min-width 720px);
 }
 
 .col-1-4 {
-  margin: 20px 0;
-
   @include media($desktop) {
     @include span-columns(3);
   }
