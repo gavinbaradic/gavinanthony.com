@@ -28,6 +28,7 @@ end
 namespace :deploy do
   desc 'Deploy to netlify'
   task :production do
+    Rake::Task['lint'].invoke
     sh 'bundle exec middleman build'
     sh 'netlify deploy'
     puts 'Deployment was successful'.green
