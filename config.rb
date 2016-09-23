@@ -37,7 +37,11 @@ helpers do
     internal_url = '/work/' + client.title.downcase
     client.url = client.external.nil? ? internal_url : client.link
     client.target = client.external.nil? ? {} : { target: '_blank' }
-    link_to client.title, client.url, client.target
+    if internal_url != '/work/likeli'
+      link_to client.title, client.url, client.target
+    else
+      client.title
+    end
   end
 
   def pages_by_category(category)
