@@ -6,8 +6,8 @@ $sans-serif: "Affogato-Medium", "Avenir", "Helvetica", sans-serif;
 $serif: "Farnham Headline Reg", "FarnhamDisplay";
 
 
-@mixin animate($time) {
-  transition: all $time ease-in-out;
+@mixin animate($time, $selector: all) {
+  transition: $selector $time ease-in-out;
 }
 
 @mixin text-center {

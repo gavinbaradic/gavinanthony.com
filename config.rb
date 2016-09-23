@@ -17,7 +17,7 @@ activate :google_analytics do |ga|
 end
 
 configure :development do
-  activate :livereload
+  # activate :livereload
 end
 
 configure :build do
