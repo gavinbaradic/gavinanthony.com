@@ -3,7 +3,7 @@ require 'colorize'
 task default: :lint
 
 desc 'Lint ruby, haml, and scss'
-task lint: ['lint:ruby', 'lint:haml', 'lint:scss']
+task lint: ['lint:ruby', 'lint:haml', 'lint:scss', 'lint:javascript']
 
 namespace :lint do
   desc 'Run rubocop'
@@ -22,6 +22,12 @@ namespace :lint do
   task :scss do
     sh 'scss-lint source/stylesheets/*'
     puts 'scss-lint passed'.green
+  end
+
+  desc 'Run eslint'
+  task :javascript do
+    sh 'eslint --ext .es6, .js source/javascripts/*'
+    puts 'eslint passed'.green
   end
 end
 
