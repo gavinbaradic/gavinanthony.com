@@ -3,7 +3,7 @@ $base-color: #3a4859;
 $alt-color: #9df;
 
 $sans-serif: "Affogato-Medium", "Avenir", "Helvetica", sans-serif;
-$serif: "Farnham Headline Reg", "FarnhamDisplay";
+$serif: "Farnham Headline Reg", "FarnhamDisplay", serif;
 
 
 @mixin animate($time, $selector: all) {
