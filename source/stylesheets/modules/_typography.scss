@@ -1,4 +1,14 @@
 @include font-face(Affogato-Medium, "fonts/Affogato-Medium");
+@font-face {
+  font-family: "Farnham Headline Reg";
+  font-weight: Normal;
+  font-style: Normal;
+  src: url("//cloud.typenetwork.com/licenseWeb/7064/fontfile/eot/");
+  src: url("//cloud.typenetwork.com/licenseWeb/7064/fontfile/eot/?#iefix") format("embedded-opentype"),
+       url("//cloud.typenetwork.com/licenseWeb/7064/fontfile/woff2/") format("woff2"),
+       url("//cloud.typenetwork.com/licenseWeb/7064/fontfile/woff/") format("woff");
+}
+
 // Grey Colors
 $g1: #263140;
 $g2: #3a4859;

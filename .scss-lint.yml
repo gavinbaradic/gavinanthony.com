@@ -45,3 +45,6 @@ linters:
   StringQuotes:
     enabled: true
     style: double_quotes
+
+  UrlFormat:
+    enabled: false
