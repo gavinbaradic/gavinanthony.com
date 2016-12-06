@@ -7,15 +7,15 @@
     %link{ href: '/stylesheets/fonts/Affogato-Medium.woff2', rel: 'preload', as: 'font', crossorigin: true }
     %link{ href: '//cloud.typenetwork.com/licenseWeb/7064/fontfile/woff2/', rel: 'preload', as: 'font', crossorigin: true }
     = stylesheet_link_tag :site
-    -# = javascript_include_tag :all
+    = javascript_include_tag :all
   %body{ class: page_classes }
     .wrapper
       .container
-        = partial 'partials/header'
+        = partial 'partials/header', locals: { header_title: current_page.title }
         %figure
           = image_tag "work/#{current_page.data.title.downcase}/banner.jpg"
         = partial 'partials/client-stats'
-        -# = current_article.previous_article.url
-        -# = current_article.next_article.url
+        = get_prev_link(current_article)
+        = get_next_link(current_article)
       = yield
       = partial 'partials/footer'
