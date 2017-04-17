@@ -1,5 +1,0 @@
-skip_frontmatter: true
-
-linters:
-  LineLength:
-      max: 140
