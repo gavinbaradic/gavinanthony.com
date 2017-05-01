@@ -5,15 +5,27 @@
   "repository": "https://github.com/GavinAnthony/gavinanthony.com.git",
   "author": "gavinanthony <iam@gavinanthony.com>",
   "license": "MIT",
+  "scripts": {
+    "devserve": "NODE_ENV=development ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --hot --inline --progress --history-api-fallback --https"
+  },
   "devDependencies": {
+    "babel-preset-env": "^1.4.0",
     "eslint": "^3.19.0",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "postcss-loader": "^1.3.3",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
     "webpack": "^2.4.1"
   }
 }
