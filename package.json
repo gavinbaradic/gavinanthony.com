@@ -1,0 +1,19 @@
+{
+  "name": "gavinanthony.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GavinAnthony/gavinanthony.com.git",
+  "author": "gavinanthony <iam@gavinanthony.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "webpack": "^2.4.1"
+  }
+}
