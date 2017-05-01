@@ -7,9 +7,12 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, './public'),
     stats: 'errors-only',
+    headers: { 'Access-Control-Allow-Origin': '*' },
   },
   entry: {
-    app: ['./webpack/javascripts/index.js'],
+    app: [
+      './webpack/javascripts/index.js'
+    ],
   },
   output: {
     filename: './javascripts/[name].js',
