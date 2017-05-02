@@ -11,7 +11,7 @@ module.exports = {
   },
   entry: {
     app: [
-      './webpack/javascripts/index.js'
+      './javascripts/index.js'
     ],
   },
   output: {
