@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, './public'),
+    contentBase: './',
     stats: 'errors-only',
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
