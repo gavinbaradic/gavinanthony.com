@@ -1,0 +1,43 @@
+nav {
+  align-items: center;
+  display: flex;
+  height: 256px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+  }
+}
+
+nav a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 24px;
+  padding-bottom: .25rem;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &.active {
+    border-bottom: 2px solid var(--white);
+  }
+
+  &.btn {
+    background: rgba(255, 255, 255, .15);
+    border: 0px solid transparent;
+    border-radius: 64px;
+    padding: 12px 16px;
+
+    &:hover {
+      background: rgba(255, 255, 255, .25);
+      border: 0px solid transparent;
+    }
+
+    &:active {
+      background: rgba(255, 255, 255, .35);
+    }
+  }
+}

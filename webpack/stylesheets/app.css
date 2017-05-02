@@ -1,2 +1,6 @@
+@import 'base/variables';
 @import 'base/base';
+
+@import 'components/nav';
+@import 'components/header';
 

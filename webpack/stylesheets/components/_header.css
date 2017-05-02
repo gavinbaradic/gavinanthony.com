@@ -1,0 +1,15 @@
+.header {
+  margin-top: 128px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: calc(1.5rem * 2rem);
+}
+
+h2 {
+  font-size: 1.375rem;
+  line-height: calc(1.5rem * 1.375rem);
+  font-weight: 500;
+  max-width: 512px;
+}
