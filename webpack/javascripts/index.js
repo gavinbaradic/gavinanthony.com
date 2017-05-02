@@ -10,6 +10,7 @@ import styles from '../stylesheets/app.css'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import About from './pages/About'
+import Contact from './pages/Contact'
 
 function Root() {
   return (
@@ -18,6 +19,7 @@ function Root() {
         <Nav />
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
         <Route path="/work/:clientName" component={Home} />
       </div>
     </Router>
