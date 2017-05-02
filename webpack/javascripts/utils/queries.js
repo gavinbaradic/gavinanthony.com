@@ -1,7 +1,8 @@
 export const getClients = `
-query {
-  allClients {
-    name
+  query {
+    allClients(orderBy: createdAt_ASC) {
+      name
+      properties
+    }
   }
-}
 `

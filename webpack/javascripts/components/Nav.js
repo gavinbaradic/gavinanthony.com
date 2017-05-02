@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Nav() {
   return (
     <nav>
       <section className="container">
         <aside>
-          <a href="/">Gavin Anthony</a>
+          <Link to="/">Gavin Anthony</Link>
         </aside>
         <aside>
-          <a href="/" className="active">Work</a>
-          <a href="/">About</a>
-          <a href="/" className="btn">Contact</a>
+          <NavLink to="/" exact>Work</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact" className="btn">Contact</NavLink>
         </aside>
       </section>
     </nav>

@@ -1,33 +1,27 @@
 import React from 'react'
 import { render } from 'react-dom'
-
-import Nav from './components/Nav'
-import Header from './components/Header'
-import Clients from './components/Clients'
-import graphql from './utils/graphql'
-import { getClients } from './utils/queries'
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom'
 
 import styles from '../stylesheets/app.css'
 
-class App extends React.Component {
-  state = {
-    clients: [],
-  }
+import Nav from './components/Nav'
+import Home from './pages/Home'
+import About from './pages/About'
 
-  componentWillMount() {
-    graphql({ query: getClients })
-      .then(({ allClients }) => this.setState({ clients: allClients }))
-  }
-
-  render() {
-    return (
+function Root() {
+  return (
+    <Router>
       <div>
         <Nav />
-        <Header />
-        <Clients clients={this.state.clients} />
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/work/:clientName" component={Home} />
       </div>
-    )
-  }
+    </Router>
+  )
 }
 
-render(<App />, document.getElementById('app'))
+render(<Root />, document.getElementById('app'))
