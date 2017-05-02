@@ -9,6 +9,8 @@
     "devserve": "NODE_ENV=development ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --hot --inline --progress --history-api-fallback --https"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.4.0",
     "eslint": "^3.19.0",
     "postcss-cssnext": "^2.10.0",
@@ -16,6 +18,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-react": "^6.24.1",
