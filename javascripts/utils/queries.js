@@ -2,7 +2,25 @@ export const getClients = `
   query {
     allClients(orderBy: createdAt_ASC) {
       name
+      slug
       properties
+    }
+  }
+`
+
+export const getClientDetails = `
+  query client($slug: String!) {
+    Client(slug: $slug) {
+      name
+      duration
+      overview {
+        appstore
+        playstore
+        role
+        scope
+        stack
+        website
+      }
     }
   }
 `

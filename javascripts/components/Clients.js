@@ -6,7 +6,12 @@ export default function Clients({ clients }) {
       {clients.map((client, i) => {
         const className = client.properties !== null ? client.properties.class : ''
         return (
-          <div className={className} key={i}>{client.name}</div>
+          <a
+            className={className}
+            href={`/work/${client.slug}`}
+            key={i}>
+            {client.name}
+          </a>
         )
       })}
     </section>

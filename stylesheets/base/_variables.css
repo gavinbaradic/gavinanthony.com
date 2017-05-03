@@ -5,3 +5,7 @@
   --sansSerif: 'Maison Neue TRIAL';
 }
 
+::selection {
+  background: rgba(255, 255, 255, .3);
+  color: var(--white);
+}

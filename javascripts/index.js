@@ -13,6 +13,7 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Client from './pages/Client'
 
 function Root() {
   return (
@@ -23,7 +24,7 @@ function Root() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
-          <Route path="/work/:clientName" component={Home} />
+          <Route path="/work/:slug" component={Client} />
         </Switch>
       </div>
     </Router>
