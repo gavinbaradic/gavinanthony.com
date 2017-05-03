@@ -9,6 +9,7 @@ body {
   color: var(--white);
   font-family: var(--sansSerif);
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.5rem;
   -webkit-font-smoothing: antialiased;
 }
@@ -23,10 +24,4 @@ a {
   &:hover {
     border-bottom: 2px solid var(--white);
   }
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 0 50px;
 }

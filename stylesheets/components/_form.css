@@ -1,0 +1,48 @@
+.contact-form {
+  margin-top: 20px;
+
+  .formrow {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  input,
+  textarea {
+    background: rgba(255, 255, 255, .1);
+    border: 0;
+    border-radius: 3px;
+    font: inherit;
+    margin-top: 8px;
+    outline: 0;
+    padding: 12px;
+    color: var(--white);
+    transition: .2s background ease-in-out;
+
+    &:focus {
+      background: rgba(255, 255, 255, .15);
+    }
+  }
+}
+
+.button,
+button {
+  background: rgba(255, 255, 255, .15);
+  border-radius: 64px;
+  border: 0px solid transparent;
+  color: var(--white);
+  cursor: pointer;
+  font: inherit;
+  margin-right: auto;
+  outline: 0;
+  padding: 12px 32px;
+  transition: .2s all ease-in-out;
+
+  &:hover {
+    background: rgba(255, 255, 255, .25);
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, .35);
+  }
+}
