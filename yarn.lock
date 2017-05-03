@@ -3921,6 +3921,13 @@ react-router@^4.1.1:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
+react-tilt@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-tilt/-/react-tilt-0.1.1.tgz#8ca31c1d44f9376aa2910c6995c1f8cb5988e84e"
+  dependencies:
+    react "^15.5.4"
+    react-dom "^15.5.4"
+
 react-transition-group@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-1.1.3.tgz#5e02cf6e44a863314ff3c68a0c826c2d9d70b221"
