@@ -1,0 +1,38 @@
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.example-enter {
+  animation-duration: 500ms;
+}
+
+.example-enter.example-enter-active {
+  animation-name: fadeInUp;
+}
+
+.example-leave {
+}
+
+.example-leave.example-leave-active {
+  animation-name: fadeInDown;
+}
