@@ -12,6 +12,10 @@ export default class Contact extends React.Component {
     message: '',
   }
 
+  componentDidMount() {
+    document.title = 'Contact'
+  }
+
   handleInputChange = ({ target }) => {
     const { value, id } = target
 
@@ -51,6 +55,7 @@ export default class Contact extends React.Component {
             <label htmlFor="email">Email</label>
             <input
               id="email"
+              type="email"
               placeholder="alex.smith@gmail.com"
               onChange={this.handleInputChange} />
           </div>

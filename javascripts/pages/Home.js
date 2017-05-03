@@ -15,6 +15,10 @@ export default class Index extends React.Component {
       .then(({ allClients }) => this.setState({ clients: allClients }))
   }
 
+  componentDidMount() {
+    document.title = 'Gavin Anthony'
+  }
+
   render() {
     return (
       <div>

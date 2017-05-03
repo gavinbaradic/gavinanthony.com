@@ -16,7 +16,14 @@
   lost-column: 1/1 flex;
 }
 
-
 .col-1-of-2 {
   lost-column: 1/2 flex;
+}
+
+.col-5-of-12 {
+  lost-column: 5/12 flex;
+}
+
+.col-7-of-12 {
+  lost-column: 7/12 flex;
 }
