@@ -20,6 +20,14 @@
   lost-column: 1/2 flex;
 }
 
+.col-1-of-12 {
+  lost-column: 1/12 flex;
+}
+
+.col-4-of-12 {
+  lost-column: 4/12 flex;
+}
+
 .col-5-of-12 {
   lost-column: 5/12 flex;
 }

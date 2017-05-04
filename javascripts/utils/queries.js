@@ -12,6 +12,7 @@ export const getClientDetails = `
   query client($slug: String!) {
     Client(slug: $slug) {
       name
+      description
       duration
       overview {
         appstore
