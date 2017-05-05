@@ -7,10 +7,10 @@ const RouteTransitionGroup = ({ children }) => (
   <Route render={({ location }) => (
     <CSSTransitionGroup
       transitionName='example'
-      transitionAppear={true}
       transitionAppearTimeout={500}
       transitionEnterTimeout={500}
       transitionLeaveTimeout={0}
+      transitionAppear
     >
       <div key={location.key}>
         {children}

@@ -81,7 +81,8 @@ export default class Client extends React.Component {
                 {stack && <Detail title="Stack" value={stack} text />}
                 {website && <Detail title="Website" value={website} link />}
                 {appstore && <Detail title="App Store" value={appstore} btn />}
-                {playstore && <Detail title="Play Store" value={playstore} btn />}
+                {playstore &&
+                  <Detail title="Play Store" value={playstore} btn />}
               </ul>
             </div>
           </section>
