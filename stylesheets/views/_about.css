@@ -1,0 +1,9 @@
+.photo {
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+
+.portrait {
+  padding: 25% 0;
+  background: url('../img/portrait.png') no-repeat;
+}

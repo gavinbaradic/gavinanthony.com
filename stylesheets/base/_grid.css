@@ -35,3 +35,11 @@
 .col-7-of-12 {
   lost-column: 7/12 flex;
 }
+
+.col-8-of-12 {
+  lost-column: 8/12 flex;
+}
+
+.pull-4 {
+  lost-offset: -4/12;
+}
