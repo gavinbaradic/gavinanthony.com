@@ -12,13 +12,13 @@ const Card = ({ clients }) => (
       return (
         <Tilt
           className={`card ${className}`}
+          style={{ height: 613, width: '50%' }}
           options={{
             max: 5,
             speed: 500,
             scale: 1.01,
             glare: true,
           }}
-          style={{ height: 613, width: '50%' }}
         >
           <a
             href={`/work/${client.slug}`}

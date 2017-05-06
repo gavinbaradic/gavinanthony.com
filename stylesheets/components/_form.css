@@ -18,10 +18,15 @@
     padding: 12px;
     color: var(--white);
     transition: .2s background ease-in-out;
+    resize: vertical;
 
     &:focus {
       background: rgba(255, 255, 255, .15);
     }
+  }
+
+  textarea {
+    min-height: 12rem;
   }
 }
 
