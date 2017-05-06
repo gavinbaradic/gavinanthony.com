@@ -7,6 +7,7 @@
 @import 'components/header';
 @import 'components/form';
 @import 'components/client';
+@import 'components/card';
 
 @import 'views/about';
 

@@ -3,6 +3,7 @@ export const getClients = `
     allClients(orderBy: createdAt_ASC) {
       name
       slug
+      description
       properties
     }
   }
