@@ -4,7 +4,7 @@
 
 .card {
   display: flex;
-  background:rgba(255, 255, 255, 0.1);
+  background: var(--darkGray);
   border-radius: 10px;
   color: white;
   height: 613px;
