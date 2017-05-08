@@ -7,3 +7,12 @@
   padding: 25% 0;
   background: url('../img/portrait.png') no-repeat;
 }
+
+.profile {
+  font-size: 1.25rem;
+  line-height: calc(1.5rem * 1.25rem);
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
