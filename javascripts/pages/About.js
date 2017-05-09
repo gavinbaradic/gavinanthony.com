@@ -33,7 +33,29 @@ export default class About extends React.Component {
             Experience
           </div>
           <div className="col-7-of-12">
-            Lorem
+            <ul className="experience">
+              <li>
+                <h4>
+                  <span>Jomo/Likeli</span>
+                  <span>2015–2017</span>
+                </h4>
+                <span>Lead Designer</span>
+              </li>
+              <li>
+                <h4>
+                  <span>Taplet Labs</span>
+                  <span>2014–2015</span>
+                </h4>
+                <span>Product Designer</span>
+              </li>
+              <li>
+                <h4>
+                  <span>Gener8tor</span>
+                  <span>2013–2014</span>
+                </h4>
+                <span>UX Intern</span>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
