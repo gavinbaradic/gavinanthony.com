@@ -6,9 +6,10 @@
   "author": "gavinanthony <iam@gavinanthony.com>",
   "license": "MIT",
   "scripts": {
-    "devserve": "NODE_ENV=development ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --hot --inline --progress --history-api-fallback --https"
+    "dev": "NODE_ENV=development ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --hot --inline --progress --history-api-fallback --https"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.4.0",

@@ -11,6 +11,7 @@ const Card = ({ clients }) => (
       const size = client.properties !== null ? 'large' : 'small'
       return (
         <Tilt
+          key={client.slug}
           className={`card ${className}`}
           style={{ height: 613, width: '50%' }}
           options={{
@@ -39,11 +40,11 @@ const Card = ({ clients }) => (
 )
 
 Card.propTypes = {
-  clients: PropTypes.shape([
-    {
+  clients: PropTypes.arrayOf(
+    PropTypes.shape({
       name: PropTypes.string.isRequired,
-    },
-  ]).isRequired,
+    })
+  ).isRequired,
 }
 
 export default Card

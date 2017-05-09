@@ -1,6 +1,6 @@
 export const getClients = `
   query {
-    allClients(orderBy: createdAt_ASC) {
+    allClients(orderBy: order_ASC) {
       name
       slug
       description

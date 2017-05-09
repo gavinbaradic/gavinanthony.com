@@ -1,19 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
+import Detail from '../components/Detail'
 import Loading from '../components/Loading'
 import graphql from '../utils/graphql'
 import { getClientDetails } from '../utils/queries'
 
-const Detail = ({ title, value, text, link, btn }) => (
-  <li>
-    <span>{title}</span>
-    {link && <a href={value} target="_blank">{value}</a>}
-    {btn && <a href={value} target="_blank" className="btn">{value}</a>}
-    {text && <span>{value}</span>}
-  </li>
-)
-
 export default class Client extends React.Component {
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }),
+    }).isRequired,
+  }
+
   state = {
     isFetching: true,
     slug: this.props.match.params.slug,
