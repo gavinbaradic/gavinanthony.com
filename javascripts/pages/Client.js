@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Detail from '../components/Detail'
-import Loading from '../components/Loading'
-import graphql from '../utils/graphql'
-import { getClientDetails } from '../utils/queries'
+import Detail from 'components/Detail'
+import Loading from 'components/Loading'
+import graphql from 'utils/graphql'
+import { getClientDetails } from 'utils/queries'
+
+import Taplet from '../clients/Taplet'
 
 export default class Client extends React.Component {
   static propTypes = {
@@ -61,11 +63,12 @@ export default class Client extends React.Component {
       playstore,
       appstore,
     } = this.state
+
     return (
       <div>
         {isFetching && <Loading />}
         <section className="client-cover container">
-          <img src={require(`../../img/${this.state.slug}/logo-white.svg`)} />
+          <img src={require(`img/${this.state.slug}/logo-white.svg`)} />
         </section>
         <div className={isFetching ? 'hidden' : 'client-overview fadeInUp'}>
           <section className="container">
@@ -87,6 +90,9 @@ export default class Client extends React.Component {
               </ul>
             </div>
           </section>
+        </div>
+        <div className={isFetching ? 'hidden' : 'fadeInUp'}>
+          <Taplet />
         </div>
       </div>
     )

@@ -1,0 +1,16 @@
+.btn {
+  color: var(--black);
+  background: var(--white);
+  padding: 5px 7px 4px;
+  border-radius: 3px;
+  border: 0;
+
+  &:hover {
+    background: rgba(255, 255, 255, .9);
+    border: 0;
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, .7);
+  }
+}

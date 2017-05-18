@@ -1,5 +1,6 @@
 .clients {
   margin-top: 200px;
+  min-height: 100vh;
 }
 
 .card {
@@ -9,15 +10,18 @@
   color: white;
   height: 613px;
   margin: 0 0 30px 0;
-  lost-column: 6/12 20;
+  lost-column: 1/2;
+  lost-column-cycle: 3;
   transform-style: preserve-3d;
 
   &.fullwidth {
-    lost-column: 12/12;
+    lost-column: 1;
+    color: var(--black);
   }
 
   a {
     display: flex;
+    border-radius: 10px;
     padding: 40px;
     width: 100%;
     background-size: 100%;

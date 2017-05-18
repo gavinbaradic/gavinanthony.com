@@ -6,6 +6,10 @@
   &.small {
     lost-center: 700px;
   }
+
+  &.full {
+    lost-center: 100%;
+  }
 }
 
 .grid-row {
@@ -46,4 +50,8 @@
 
 .pull-4 {
   lost-offset: -4/12;
+}
+
+.m-b-100 {
+  margin-bottom: 100px;
 }

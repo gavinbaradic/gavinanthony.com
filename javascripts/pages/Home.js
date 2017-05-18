@@ -25,7 +25,10 @@ export default class Index extends React.Component {
     return (
       <div>
         <Header />
-        {this.state.loaded && <Card clients={this.state.clients} />}
+        <Card
+          clients={this.state.clients}
+          loadedClass={this.state.loaded && 'fadeInUp'}
+        />
       </div>
     )
   }

@@ -1,15 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import styles from '../stylesheets/app.css'
 
-import RouteTransitionGroup from './components/RouteTransitionGroup'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -26,6 +22,7 @@ function Root() {
           <Route path="/contact" component={Contact} />
           <Route path="/work/:slug" component={Client} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   )

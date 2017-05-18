@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Tilt from 'react-tilt'
 
-const Card = ({ clients }) => (
-  <section className="clients container fadeInUp">
+const Card = ({ clients, loadedClass }) => (
+  <section className={`clients container ${loadedClass}`}>
     {clients.map((client) => {
       const className = client.properties !== null
         ? client.properties.class
@@ -13,7 +13,7 @@ const Card = ({ clients }) => (
         <Tilt
           key={client.slug}
           className={`card ${className}`}
-          style={{ height: 613, width: '50%' }}
+          style={{ height: 613 }}
           options={{
             max: 5,
             speed: 500,
@@ -40,11 +40,16 @@ const Card = ({ clients }) => (
 )
 
 Card.propTypes = {
+  loadedClass: PropTypes.string,
   clients: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
+}
+
+Card.defaultProps = {
+  loadedClass: '',
 }
 
 export default Card

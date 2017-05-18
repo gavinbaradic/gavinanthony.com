@@ -6,6 +6,7 @@
 @import 'components/nav';
 @import 'components/header';
 @import 'components/form';
+@import 'components/buttons';
 @import 'components/client';
 @import 'components/card';
 

@@ -5,7 +5,7 @@ const Detail = ({ title, value, text, link, btn }) => (
   <li>
     <span>{title}</span>
     {link && <a href={value} target="_blank">{value}</a>}
-    {btn && <a href={value} target="_blank" className="btn">{value}</a>}
+    {btn && <a href={value} target="_blank" className="btn">Download</a>}
     {text && <span>{value}</span>}
   </li>
 )
@@ -13,8 +13,8 @@ const Detail = ({ title, value, text, link, btn }) => (
 Detail.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  text: PropTypes.string,
-  link: PropTypes.string,
+  text: PropTypes.boolean,
+  link: PropTypes.boolean,
   btn: PropTypes.boolean,
 }
 
