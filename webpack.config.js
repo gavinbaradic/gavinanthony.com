@@ -10,9 +10,7 @@ module.exports = {
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
   entry: {
-    app: [
-      './javascripts/index.js'
-    ],
+    app: ['./javascripts/index.js'],
   },
   output: {
     filename: './javascripts/[name].js',
@@ -24,7 +22,7 @@ module.exports = {
       {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.(scss|sass|css)$/i,
@@ -33,29 +31,32 @@ module.exports = {
           use: [
             {
               loader: 'css-loader',
-              options: { minimize: true }
+              options: { minimize: true },
             },
             'postcss-loader',
             'sass-loader',
-          ]
-        })
+          ],
+        }),
       },
       {
         test: /\.(jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[path][name]-[hash:5].[ext]',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name]-[hash:5].[ext]',
+            },
           },
-        }]
+        ],
       },
-    ]
+    ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
     modules: ['node_modules'],
+    alias: {
+      'p/img': path.join(__dirname, 'img'),
+    },
   },
-  plugins: [
-    new ExtractTextPlugin('./stylesheets/[name].css'),
-  ]
+  plugins: [new ExtractTextPlugin('./stylesheets/[name].css')],
 }
