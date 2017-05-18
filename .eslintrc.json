@@ -12,6 +12,11 @@
     "func-names": 0,
     "no-alert": 0
   },
+  "settings": {
+    "import/resolver": {
+      "webpack": "webpack.config.js"
+    }
+  },
   "env": {
     "browser": true
   }

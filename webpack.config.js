@@ -55,7 +55,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss'],
     modules: ['node_modules'],
     alias: {
-      'p/img': path.join(__dirname, 'img'),
+      img: path.join(__dirname, 'img'),
+      components: path.join(__dirname, 'javascripts/components'),
+      pages: path.join(__dirname, 'javascripts/pages'),
+      utils: path.join(__dirname, 'javascripts/utils'),
     },
   },
   plugins: [new ExtractTextPlugin('./stylesheets/[name].css')],
