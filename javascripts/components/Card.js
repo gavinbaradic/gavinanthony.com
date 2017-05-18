@@ -25,7 +25,7 @@ const Card = ({ clients, loadedClass }) => (
             href={`/work/${client.slug}`}
             key={client.name}
             style={{
-              backgroundImage: `url(../img/${client.slug}/feature-${size}.png)`,
+              backgroundImage: `url(img/${client.slug}/feature-${size}.png)`,
             }}
           >
             <div>
