@@ -1,6 +1,8 @@
 :root {
   --black: #000000;
   --darkGray: #222;
+  --mediumGray: #333;
+  --lightGray: #444;
   --white: #ffffff;
 
   --sansSerif: 'Maison Neue TRIAL';

@@ -1,5 +1,10 @@
 .header {
   margin-top: 128px;
+
+  a {
+    display: inline-flex;
+    margin-top: 1rem;
+  }
 }
 
 h1 {
