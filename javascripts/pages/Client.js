@@ -6,7 +6,15 @@ import Loading from 'components/Loading'
 import graphql from 'utils/graphql'
 import { getClientDetails } from 'utils/queries'
 
-import Taplet from '../clients/Taplet'
+import Default from 'clients'
+import Recipelist from 'clients/Recipelist'
+import Taplet from 'clients/Taplet'
+
+const AllClients = [
+  { slug: 'default', ActiveComponent: React.createFactory(Default) },
+  { slug: 'recipelist', ActiveComponent: React.createFactory(Recipelist) },
+  { slug: 'taplet', ActiveComponent: React.createFactory(Taplet) },
+]
 
 export default class Client extends React.Component {
   static propTypes = {
@@ -20,6 +28,7 @@ export default class Client extends React.Component {
   state = {
     isFetching: true,
     slug: this.props.match.params.slug,
+    component: AllClients[0],
     name: '',
     description: '',
     duration: '',
@@ -31,11 +40,14 @@ export default class Client extends React.Component {
   }
 
   componentWillMount() {
-    const variables = { slug: this.props.match.params.slug }
+    const { slug } = this.props.match.params
+    const variables = { slug }
+    const component = AllClients.find(c => c.slug === slug)
 
     graphql({ query: getClientDetails, variables }).then(({ Client }) => {
       this.setState({
         isFetching: false,
+        component,
         name: Client.name,
         description: Client.description,
         duration: Client.duration,
@@ -92,7 +104,7 @@ export default class Client extends React.Component {
           </section>
         </div>
         <div className={isFetching ? 'hidden' : 'fadeInUp'}>
-          <Taplet />
+          {this.state.component.ActiveComponent()}
         </div>
       </div>
     )
