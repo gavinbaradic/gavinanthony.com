@@ -36,7 +36,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <section className="contact container small">
+      <section className="contact container fadeInUp small">
         <div className="col-1-of-1">
           <h1>Let's Talk</h1>
           <h2>

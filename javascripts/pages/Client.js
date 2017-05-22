@@ -85,7 +85,7 @@ export default class Client extends React.Component {
     return (
       <div>
         {isFetching && <Loading />}
-        <section className="client-cover container">
+        <section className="client-cover container fadeInUp">
           <img src={require(`img/${this.state.slug}/logo-white.svg`)} />
         </section>
         <div className={isFetching ? 'hidden' : 'client-overview fadeInUp'}>
