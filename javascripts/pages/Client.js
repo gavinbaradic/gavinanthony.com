@@ -8,12 +8,18 @@ import { getClientDetails } from 'utils/queries'
 
 import Default from 'clients'
 import Recipelist from 'clients/Recipelist'
+import Jomo from 'clients/Jomo'
 import Taplet from 'clients/Taplet'
+import Blip from 'clients/Blip'
+import Poparazzi from 'clients/Poparazzi'
 
 const AllClients = [
   { slug: 'default', ActiveComponent: React.createFactory(Default) },
   { slug: 'recipelist', ActiveComponent: React.createFactory(Recipelist) },
+  { slug: 'jomo', ActiveComponent: React.createFactory(Jomo) },
   { slug: 'taplet', ActiveComponent: React.createFactory(Taplet) },
+  { slug: 'blip', ActiveComponent: React.createFactory(Blip) },
+  { slug: 'poparazzi', ActiveComponent: React.createFactory(Poparazzi) },
 ]
 
 export default class Client extends React.Component {
