@@ -13,9 +13,9 @@ const Detail = ({ title, value, text, link, btn }) => (
 Detail.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  text: PropTypes.boolean,
-  link: PropTypes.boolean,
-  btn: PropTypes.boolean,
+  text: PropTypes.bool,
+  link: PropTypes.bool,
+  btn: PropTypes.bool,
 }
 
 Detail.defaultProps = {
