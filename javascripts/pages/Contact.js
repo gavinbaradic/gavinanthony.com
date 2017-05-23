@@ -29,9 +29,11 @@ export default class Contact extends React.Component {
     const { name, email, message } = this.state
     const variables = { name, email, message }
 
-    graphql({ query: formSubmission, variables })
-      .then(res => this.setState({ isSubmitting: false, submitted: true }))
-      .catch(err => console.log(err))
+    this.setState({ isSubmitting: false, submitted: true })
+
+    // graphql({ query: formSubmission, variables })
+    //   .then(res => this.setState({ isSubmitting: false, submitted: true }))
+    //   .catch(err => console.log(err))
   }
 
   render() {
@@ -40,7 +42,9 @@ export default class Contact extends React.Component {
         <div className="col-1-of-1">
           <h1>Let's Talk</h1>
           <h2>
-            Reach out for a project or just to say hello! My personal email is <a href="mailto:iam@gavinanthony.com">iam@gavinanthony.com</a>
+            Reach out for a project or just to say hello! My personal email is
+            {' '}
+            <a href="mailto:iam@gavinanthony.com">iam@gavinanthony.com</a>
           </h2>
         </div>
         <form className="contact-form grid-row">
@@ -49,7 +53,8 @@ export default class Contact extends React.Component {
             <input
               id="name"
               placeholder="Alex Smith"
-              onChange={this.handleInputChange} />
+              onChange={this.handleInputChange}
+            />
           </div>
           <div className="formrow col-1-of-2">
             <label htmlFor="email">Email</label>
@@ -57,18 +62,20 @@ export default class Contact extends React.Component {
               id="email"
               type="email"
               placeholder="alex.smith@gmail.com"
-              onChange={this.handleInputChange} />
+              onChange={this.handleInputChange}
+            />
           </div>
           <div className="formrow col-1-of-1">
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
               placeholder="Hello..."
-              onChange={this.handleInputChange} />
+              onChange={this.handleInputChange}
+            />
           </div>
           <div className="formrow col-1-of-1">
             <button onClick={this.handleSubmit}>
-              {this.state.submitted ? 'Thank you!' : 'Send Message' }
+              {this.state.submitted ? 'Thank you!' : 'Send Message'}
             </button>
           </div>
         </form>

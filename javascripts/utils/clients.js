@@ -4,7 +4,7 @@ import Recipelist from 'clients/Recipelist'
 import Jomo from 'clients/Jomo'
 import Taplet from 'clients/Taplet'
 import Blip from 'clients/Blip'
-import Poparazzi from 'clients/Poparazzi'
+import Likeli from 'clients/Likeli'
 
 export default [
   {
@@ -68,13 +68,13 @@ export default [
     website: 'http://blipme.co',
   },
   {
-    description: '',
+    description: 'Likeli changes the way you go out, where you end up and who you meet. It is the social compass that never lets you down.',
     duration: '2016-2017',
-    name: 'Poparazzi',
-    loadComponent: createFactory(Poparazzi),
+    name: 'Likeli',
+    loadComponent: createFactory(Likeli),
     order: '6',
     properties: null,
-    slug: 'poparazzi',
+    slug: 'likeli',
     // appstore: '',
     // playstore: '',
     role: 'Product Designer',
@@ -96,4 +96,39 @@ export default [
   //   stack: '',
   //   website: '',
   // },
+]
+
+export const moreWork = [
+  {
+    img: 'gener8tor',
+    href: 'http://gener8tor.com',
+  },
+  {
+    img: 'optyn',
+    href: 'https://optyn.com/',
+  },
+  {
+    img: 'wemontage',
+    href: 'http://wemontage.com',
+  },
+  {
+    img: 'beekeeper',
+    href: 'http://beekeeperdata.com',
+  },
+  {
+    img: 'joyspace',
+    href: 'https://angel.co/taplet-1',
+  },
+  {
+    img: 'poparazzi',
+    href: 'http://gener8tor.com',
+  },
+  {
+    img: 'sunsportmarine',
+    href: 'http://gener8tor.com',
+  },
+  {
+    img: 'kioh',
+    href: 'http://gener8tor.com',
+  },
 ]

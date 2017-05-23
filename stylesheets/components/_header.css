@@ -18,3 +18,8 @@ h2 {
   font-weight: 500;
   max-width: 512px;
 }
+
+.headline {
+  font-size: 2rem;
+  line-height: calc(1.5rem * 2rem);
+}

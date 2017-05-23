@@ -28,6 +28,11 @@
   lost-column: 1/12 flex;
 }
 
+.col-3-of-12 {
+  lost-column: 3/12 flex;
+  lost-column-cycle: 4;
+}
+
 .col-4-of-12 {
   lost-column: 4/12 flex;
 }

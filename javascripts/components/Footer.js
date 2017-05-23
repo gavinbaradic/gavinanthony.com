@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => (
   <footer>
-    <section className="container">
+    <section className="container link-border">
       <aside>
         <Link to="/">© {new Date().getFullYear()} Gavin Anthony, Inc.</Link>
       </aside>

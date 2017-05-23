@@ -15,15 +15,22 @@ body {
 }
 
 a {
-  border-bottom: 2px solid transparent;
   color: inherit;
   line-height: inherit;
   text-decoration: none;
   transition: .2s all ease-in-out;
+}
+
+.link-border a {
+  border-bottom: 2px solid transparent;
 
   &:hover {
     border-bottom: 2px solid var(--white);
   }
+}
+
+img {
+  width: 100%;
 }
 
 .hidden {

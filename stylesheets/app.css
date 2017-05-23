@@ -8,6 +8,7 @@
 @import 'components/form';
 @import 'components/buttons';
 @import 'components/client';
+@import 'components/morework';
 @import 'components/card';
 
 @import 'views/about';

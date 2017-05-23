@@ -4,6 +4,10 @@
   justify-content: center;
   height: 180px;
   margin-bottom: 200px;
+
+  img {
+    width: auto;
+  }
 }
 
 .client-overview {

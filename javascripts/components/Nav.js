@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 export default function Nav() {
   return (
     <nav>
-      <section className="container">
+      <section className="container link-border">
         <aside>
           <Link to="/">Gavin Anthony</Link>
         </aside>
