@@ -1,5 +1,17 @@
 import React from 'react'
 
-const Default = () => <div>Loading...</div>
+const Jomo = () => (
+  <div>
+    <section className="container full">
+      <div>
+        <img
+          src={require('img/jomo/detail-feature.png')}
+          style={{ width: '100%' }}
+          alt="Taplet Feature"
+        />
+      </div>
+    </section>
+  </div>
+)
 
-export default Default
+export default Jomo

@@ -17,7 +17,7 @@ export default class About extends React.Component {
         </section>
         <section className="container fadeInUp profile">
           <div className="col-5-of-12">
-            Profile
+            <h4>Profile</h4>
           </div>
           <div className="col-7-of-12">
             <p>
@@ -30,7 +30,7 @@ export default class About extends React.Component {
         </section>
         <section className="container fadeInUp profile">
           <div className="col-5-of-12">
-            Experience
+            <h4>Experience</h4>
           </div>
           <div className="col-7-of-12">
             <ul className="experience">

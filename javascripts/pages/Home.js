@@ -2,19 +2,11 @@ import React from 'react'
 
 import Header from '../components/Header'
 import Card from '../components/Card'
-import graphql from '../utils/graphql'
-import { getClients } from '../utils/queries'
+import allClients from '../utils/clients'
 
 export default class Index extends React.Component {
   state = {
-    clients: [],
-    loaded: false,
-  }
-
-  componentWillMount() {
-    graphql({ query: getClients }).then(({ allClients }) =>
-      this.setState({ clients: allClients, loaded: true })
-    )
+    clients: allClients,
   }
 
   componentDidMount() {
@@ -25,10 +17,7 @@ export default class Index extends React.Component {
     return (
       <div>
         <Header />
-        <Card
-          clients={this.state.clients}
-          loadedClass={this.state.loaded && 'fadeInUp'}
-        />
+        <Card clients={this.state.clients} />
       </div>
     )
   }
