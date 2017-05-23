@@ -35,7 +35,7 @@
     align-self: flex-end;
     display: flex;
     flex-direction: column;
-    transform: translateZ(20px);
+    transform: translateZ(30px);
   }
 
   h3 {

@@ -37,18 +37,3 @@
   animation-duration: 500ms;
   animation-name: fadeInUp;
 }
-
-.example-enter {
-  animation-duration: 500ms;
-}
-
-.example-enter.example-enter-active {
-  animation-name: fadeInUp;
-}
-
-.example-leave {
-}
-
-.example-leave.example-leave-active {
-  animation-name: fadeInDown;
-}

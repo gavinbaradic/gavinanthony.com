@@ -17,7 +17,7 @@ const Card = ({ clients }) => (
           options={{
             max: 5,
             speed: 500,
-            scale: 1.01,
+            scale: 1.02,
             glare: true,
           }}
         >
