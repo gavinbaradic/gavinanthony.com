@@ -22,6 +22,16 @@ export default class Contact extends React.Component {
     this.setState({ [id]: value })
   }
 
+  validateForm = (formData) => {
+    const validation = {
+      nameIsValid: formData.name.length > 0,
+      emailIsValid: formData.email.length > 0,
+      messageIsValid: formData.message.length > 0,
+    }
+
+    return Object.keys(validation).every(v => validation[v] === true)
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
     this.setState({ isSubmitting: true })
@@ -29,7 +39,11 @@ export default class Contact extends React.Component {
     const { name, email, message } = this.state
     const variables = { name, email, message }
 
-    this.setState({ isSubmitting: false, submitted: true })
+    if (this.validateForm(variables)) {
+      this.setState({ isSubmitting: false, submitted: true })
+    } else {
+      console.log('error')
+    }
 
     // graphql({ query: formSubmission, variables })
     //   .then(res => this.setState({ isSubmitting: false, submitted: true }))
