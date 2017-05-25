@@ -22,6 +22,16 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .loading {
   position: fixed;
   top: 50%;
@@ -30,7 +40,8 @@
 }
 
 .fadeIn {
-  transition: .5s opacity ease;
+  animation-duration: 500ms;
+  animation-name: fadeIn;
 }
 
 .fadeInUp {

@@ -10,6 +10,11 @@ export default class Contact extends React.Component {
     name: '',
     email: '',
     message: '',
+    errors: {
+      name: '',
+      email: '',
+      message: '',
+    },
   }
 
   componentDidMount() {
@@ -19,13 +24,18 @@ export default class Contact extends React.Component {
   handleInputChange = ({ target }) => {
     const { value, id } = target
 
-    this.setState({ [id]: value })
+    this.setState({
+      [id]: value,
+      errors: Object.assign(this.state.errors, {
+        [id]: '',
+      }),
+    })
   }
 
   validateForm = (formData) => {
     const validation = {
       nameIsValid: formData.name.length > 0,
-      emailIsValid: formData.email.length > 0,
+      emailIsValid: /.+@.+/.test(formData.email),
       messageIsValid: formData.message.length > 0,
     }
 
@@ -40,20 +50,28 @@ export default class Contact extends React.Component {
     const variables = { name, email, message }
 
     if (this.validateForm(variables)) {
-      this.setState({ isSubmitting: false, submitted: true })
+      // this.setState({ isSubmitting: false, submitted: true })
+      graphql({ query: formSubmission, variables })
+        .then(() => this.setState({ isSubmitting: false, submitted: true }))
+        .catch(err => console.log(err))
     } else {
-      console.log('error')
+      this.setState({
+        errors: {
+          name: '* Do not leave blank',
+          email: '* Email is not valid',
+          message: '* Do not leave blank',
+        },
+      })
     }
-
-    // graphql({ query: formSubmission, variables })
-    //   .then(res => this.setState({ isSubmitting: false, submitted: true }))
-    //   .catch(err => console.log(err))
   }
 
   render() {
+    const isAnError = Object.keys(this.state.errors).some(
+      e => this.state.errors[e].length > 0
+    )
     return (
       <section className="contact container fadeInUp small">
-        <div className="col-1-of-1">
+        <div className="col-1-of-1 link-border">
           <h1>Let's Talk</h1>
           <h2>
             Reach out for a project or just to say hello! My personal email is
@@ -62,36 +80,53 @@ export default class Contact extends React.Component {
           </h2>
         </div>
         <form className="contact-form grid-row">
-          <div className="formrow col-1-of-2">
-            <label htmlFor="name">Full Name</label>
+          <fieldset className="col-1-of-2" disabled={this.state.submitted}>
+            <label htmlFor="name">
+              Full Name <span>{this.state.errors.name}</span>
+            </label>
             <input
               id="name"
               placeholder="Alex Smith"
               onChange={this.handleInputChange}
             />
-          </div>
-          <div className="formrow col-1-of-2">
-            <label htmlFor="email">Email</label>
+          </fieldset>
+          <fieldset className="col-1-of-2" disabled={this.state.submitted}>
+            <label htmlFor="email">
+              Email <span>{this.state.errors.email}</span>
+            </label>
             <input
               id="email"
               type="email"
               placeholder="alex.smith@gmail.com"
               onChange={this.handleInputChange}
             />
-          </div>
-          <div className="formrow col-1-of-1">
-            <label htmlFor="message">Message</label>
+          </fieldset>
+          <fieldset className="col-1-of-1" disabled={this.state.submitted}>
+            <label htmlFor="message">
+              Message <span>{this.state.errors.message}</span>
+            </label>
             <textarea
               id="message"
               placeholder="Hello..."
               onChange={this.handleInputChange}
             />
-          </div>
-          <div className="formrow col-1-of-1">
-            <button onClick={this.handleSubmit}>
-              {this.state.submitted ? 'Thank you!' : 'Send Message'}
-            </button>
-          </div>
+          </fieldset>
+          <fieldset className="col-1-of-1" disabled={this.state.submitted}>
+            <div className="grid-row">
+              <button
+                className={this.state.submitted && 'submitted success'}
+                onClick={this.handleSubmit}
+              >
+                {this.state.submitted
+                  ? "Thanks! We'll be in touch soon!"
+                  : 'Send Message'}
+              </button>
+              {isAnError &&
+                <div className="errors">
+                  Oops, there were some errors!
+                </div>}
+            </div>
+          </fieldset>
         </form>
       </section>
     )

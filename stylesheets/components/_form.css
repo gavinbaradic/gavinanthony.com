@@ -1,10 +1,20 @@
 .contact-form {
   margin-top: 20px;
 
-  .formrow {
+  fieldset {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    border: 0;
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: #ffc700;
+    }
   }
 
   input,
@@ -19,6 +29,7 @@
     color: var(--white);
     transition: .2s background ease-in-out;
     resize: vertical;
+    width: 100%;
 
     &:focus {
       background: rgba(255, 255, 255, .15);
@@ -38,16 +49,32 @@ button {
   color: var(--white);
   cursor: pointer;
   font: inherit;
+  font-weight: 600;
   margin-right: auto;
   outline: 0;
   padding: 12px 32px;
   transition: .2s all ease-in-out;
 
-  &:hover {
+  &:not(.submitted):hover {
     background: rgba(255, 255, 255, .25);
   }
 
-  &:active {
+  &:not(.submitted):active {
     background: rgba(255, 255, 255, .35);
   }
+}
+
+.success {
+  background: green;
+}
+
+.errors {
+  animation-duration: 500ms;
+  animation-name: fadeIn;
+  background: var(--darkGray);
+  color: #ffc700;
+  border-radius: 64px;
+  font: inherit;
+  padding: 12px 32px;
+  transition: .2s all ease-in-out;
 }
