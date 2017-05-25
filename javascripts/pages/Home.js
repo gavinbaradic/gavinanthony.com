@@ -5,10 +5,6 @@ import Card from '../components/Card'
 import allClients, { moreWork } from '../utils/clients'
 
 export default class Index extends React.Component {
-  state = {
-    clients: allClients,
-  }
-
   componentDidMount() {
     document.title = 'Gavin Anthony'
   }
@@ -17,7 +13,24 @@ export default class Index extends React.Component {
     return (
       <div>
         <Header />
-        <Card clients={this.state.clients} />
+        <section className="container clients fadeInUp">
+          {allClients.map((client) => {
+            const className = {
+              className: client.properties !== null
+                ? ['card', client.properties.className].join(' ')
+                : 'card',
+            }
+            const size = client.properties !== null ? 'large' : 'small'
+            return (
+              <Card
+                client={client}
+                className={className}
+                size={size}
+                key={client.order}
+              />
+            )
+          })}
+        </section>
         <div className="container morework fadeInUp">
           <h3 className="col-1-of-1 headline">More Clients</h3>
           <section className="grid-row">
@@ -27,8 +40,9 @@ export default class Index extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="col-3-of-12"
+                key={work.img}
               >
-                <img src={`img/more/${work.img}.png`} />
+                <img src={`img/more/${work.img}.png`} alt={work.href} />
               </a>
             ))}
           </section>
