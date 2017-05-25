@@ -121,14 +121,14 @@ export const moreWork = [
   },
   {
     img: 'poparazzi',
-    href: 'http://gener8tor.com',
+    // href: '',
   },
   {
     img: 'sunsportmarine',
-    href: 'http://gener8tor.com',
+    // href: '',
   },
   {
     img: 'kioh',
-    href: 'http://gener8tor.com',
+    // href: '',
   },
 ]
