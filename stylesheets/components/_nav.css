@@ -15,7 +15,7 @@ footer {
 nav a,
 footer a {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-family: var(--sansSerifBold);
   margin-left: 24px;
   padding-bottom: .25rem;
 

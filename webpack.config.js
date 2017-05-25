@@ -39,12 +39,23 @@ module.exports = {
         }),
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)$/i,
+        test: /\.(jpg|jpeg|png|gif|svg)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[path][name]-[hash:5].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[path][name].[ext]',
             },
           },
         ],

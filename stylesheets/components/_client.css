@@ -42,14 +42,15 @@
 
   h3 {
     text-transform: uppercase;
-    opacity: .8;
-    font-weight: 500;
+    opacity: .7;
+    font-weight: normal;
+    letter-spacing: 2px;
     margin-bottom: 20px;
   }
 
   .overview p {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: normal;
     line-height: 3rem;
   }
 }
@@ -60,8 +61,10 @@
   li {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 48px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     >:first-child {
       color: rgba(255, 255, 255, 0.8);
@@ -82,7 +85,8 @@
       display: block;
       text-align: right;
       font-size: 1.375rem;
-      font-weight: 500;
+      font-weight: normal;
+      font-style: italic;
       font-family: var(--sansSerif);
     }
   }

@@ -15,7 +15,7 @@ h1 {
 h2 {
   font-size: 1.375rem;
   line-height: calc(1.5rem * 1.375rem);
-  font-weight: 500;
+  font-weight: normal;
   max-width: 512px;
 }
 

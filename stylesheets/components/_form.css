@@ -49,7 +49,7 @@ button {
   color: var(--white);
   cursor: pointer;
   font: inherit;
-  font-weight: 600;
+  font-weight: medium;
   margin-right: auto;
   outline: 0;
   padding: 12px 32px;
