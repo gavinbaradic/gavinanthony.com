@@ -1,6 +1,5 @@
 .clients {
   margin: 200px auto;
-  min-height: 100vh;
 }
 
 .card {
@@ -14,9 +13,16 @@
   lost-column-cycle: 3;
   transform-style: preserve-3d;
 
-  &.fullwidth {
+  &:first-child {
     lost-column: 1;
+  }
+
+  &.black {
     color: var(--black);
+  }
+
+  &.half-size {
+    height: 300px;
   }
 
   a {

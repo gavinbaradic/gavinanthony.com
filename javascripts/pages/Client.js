@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Detail from 'components/Detail'
-import Loading from 'components/Loading'
+import PrevNext from 'components/PrevNext'
 import allClients from 'utils/clients'
 
 import DefaultComponent from 'clients'
@@ -17,7 +17,6 @@ export default class Client extends React.Component {
   }
 
   state = {
-    isFetching: true,
     slug: this.props.match.params.slug,
     component: DefaultComponent,
     name: '',
@@ -35,9 +34,9 @@ export default class Client extends React.Component {
     const client = allClients.find(c => c.slug === slug)
 
     this.setState({
-      isFetching: false,
       component: client.loadComponent,
       name: client.name,
+      order: client.order,
       description: client.description,
       duration: client.duration,
       scope: client.scope,
@@ -54,23 +53,14 @@ export default class Client extends React.Component {
   }
 
   render() {
-    const {
-      isFetching,
-      duration,
-      scope,
-      stack,
-      website,
-      playstore,
-      appstore,
-    } = this.state
+    const { duration, scope, stack, website, playstore, appstore } = this.state
 
     return (
       <div>
-        {isFetching && <Loading />}
         <section className="client-cover container fadeInUp">
           <img src={require(`img/${this.state.slug}/logo-white.svg`)} />
         </section>
-        <div className={isFetching ? 'hidden' : 'client-overview fadeInUp'}>
+        <div className="client-overview fadeInUp">
           <section className="container">
             <div className="col-7-of-12 overview">
               <h3>Overview</h3>
@@ -91,9 +81,10 @@ export default class Client extends React.Component {
             </div>
           </section>
         </div>
-        <div className={isFetching ? 'hidden' : 'fadeInUp'}>
+        <div className="fadeInUp">
           {this.state.component()}
         </div>
+        <PrevNext allClients={allClients} clientId={this.state.order} />
       </div>
     )
   }

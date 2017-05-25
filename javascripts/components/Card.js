@@ -5,14 +5,15 @@ import Tilt from 'react-tilt'
 const Card = ({ clients }) => (
   <section className="clients container fadeInUp">
     {clients.map((client) => {
-      const className = client.properties !== null
-        ? client.properties.class
-        : ''
+      const className = {
+        className: client.properties !== null
+          ? ['card', client.properties.className].join(' ')
+          : 'card',
+      }
       const size = client.properties !== null ? 'large' : 'small'
       return (
         <Tilt
           key={client.slug}
-          className={`card ${className}`}
           style={{ height: 613 }}
           options={{
             max: 5,
@@ -20,12 +21,15 @@ const Card = ({ clients }) => (
             scale: 1.02,
             glare: true,
           }}
+          {...className}
         >
           <a
             href={`/work/${client.slug}`}
             key={client.name}
             style={{
               backgroundImage: `url(img/${client.slug}/feature-${size}.png)`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
             }}
           >
             <div>

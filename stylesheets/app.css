@@ -9,6 +9,7 @@
 @import 'components/buttons';
 @import 'components/client';
 @import 'components/morework';
+@import 'components/prevnext';
 @import 'components/card';
 
 @import 'views/about';

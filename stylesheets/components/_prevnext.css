@@ -1,0 +1,17 @@
+.prevnext {
+  margin-top: 200px;
+
+  .card {
+    h4 {
+      opacity: 0.8;
+    }
+
+    &:nth-child(1) {
+      lost-column: 5/12;
+    }
+
+    &:nth-child(2) {
+      lost-column: 7/12;
+    }
+  }
+}
