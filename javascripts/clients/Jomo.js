@@ -4,11 +4,7 @@ const Jomo = () => (
   <div>
     <section className="container full">
       <div>
-        <img
-          src={require('img/jomo/phone-in-hand.jpg')}
-          style={{ width: '100%' }}
-          alt="Taplet Feature"
-        />
+        <img src={require('img/jomo/phone-in-hand.jpg')} alt="JOMO Feature" />
       </div>
     </section>
   </div>

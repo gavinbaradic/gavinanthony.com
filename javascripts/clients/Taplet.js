@@ -6,7 +6,6 @@ const Taplet = () => (
       <div>
         <img
           src={require('img/taplet/phone-in-hand.jpg')}
-          style={{ width: '100%' }}
           alt="Taplet Feature"
         />
       </div>
@@ -21,11 +20,7 @@ const Taplet = () => (
     </section>
     <section className="container">
       <div>
-        <img
-          src={require('img/taplet/iphones.png')}
-          style={{ width: '100%' }}
-          alt="Taplet Phones"
-        />
+        <img src={require('img/taplet/iphones.png')} alt="Taplet Phones" />
       </div>
     </section>
   </div>
