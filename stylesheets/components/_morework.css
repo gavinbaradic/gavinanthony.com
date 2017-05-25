@@ -3,7 +3,7 @@
     border-radius: 5px;
     margin: 30px auto;
 
-    &:hover {
+    &[href]:hover {
       background: var(--darkGray);
     }
   }
