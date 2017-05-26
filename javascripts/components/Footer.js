@@ -1,6 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const networks = {
+  Dribbble: 'https://dribbble.com/gavinanthony',
+  GitHub: 'https://github.com/gavinanthony',
+  LinkedIn: 'https://linkedin.com/in/gavinanthony',
+  Twitter: 'https://twitter.com/gavicoind',
+}
+
 const Footer = () => (
   <footer>
     <section className="container link-border">
@@ -8,10 +15,9 @@ const Footer = () => (
         <Link to="/">© {new Date().getFullYear()} Gavin Anthony, Inc.</Link>
       </aside>
       <aside>
-        <Link to="/">Dribbble</Link>
-        <Link to="/">GitHub</Link>
-        <Link to="/">LinkedIn</Link>
-        <Link to="/">Twitter</Link>
+        {Object.keys(networks).map((network, i) => (
+          <Link to={networks[network]} target="_blank" key={i}>{network}</Link>
+        ))}
       </aside>
     </section>
   </footer>

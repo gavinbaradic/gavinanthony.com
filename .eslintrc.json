@@ -3,14 +3,13 @@
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": 0,
+    "react/no-array-index-key": 0,
     "semi": [
       2,
       "never"
     ],
     "no-new": 0,
-    "comma-dangle": 0,
-    "func-names": 0,
-    "no-alert": 0
+    "comma-dangle": 0
   },
   "settings": {
     "import/resolver": {
