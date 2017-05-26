@@ -11,11 +11,17 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Client from './pages/Client'
 
+const ScrollToTop = () => {
+  window.scrollTo(0, 0)
+  return null
+}
+
 function Root() {
   return (
     <Router>
       <div>
         <Nav />
+        <Route component={ScrollToTop} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
