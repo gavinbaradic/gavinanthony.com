@@ -16,22 +16,20 @@ const ScrollToTop = () => {
   return null
 }
 
-function Root() {
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Route component={ScrollToTop} />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/work/:slug" component={Client} />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
-  )
-}
+const Root = () => (
+  <Router>
+    <div>
+      <Nav />
+      <Route component={ScrollToTop} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/work/:slug" component={Client} />
+      </Switch>
+      <Footer />
+    </div>
+  </Router>
+)
 
 render(<Root />, document.getElementById('app'))
