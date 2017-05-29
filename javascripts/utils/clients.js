@@ -38,7 +38,7 @@ export default [
     website: 'https://jomoapp.com',
   },
   {
-    description: 'Recipelist was initially built on Rails, but soon after, the entire front end was written in React. Later on, the method for querying data was transitioned to GraphQL to improve performance.',
+    description: 'Taplet is the best way to get awesome HD photos from your videos. Record with our powerful camera and pull out your favorite pictures. Save your enhanced photos or instantly share them instantly. Never miss another moment with Taplet.',
     duration: '2014-2015',
     name: 'Taplet',
     loadComponent: createFactory(Taplet),
@@ -68,8 +68,8 @@ export default [
     website: 'http://blipme.co',
   },
   {
-    description: 'Likeli changes the way you go out, where you end up and who you meet. It is the social compass that never lets you down.',
-    duration: '2016-2017',
+    description: 'Likeli transforms the way you go out, where you end up, and who you meet. Get real time updates where the crowds are on a weather-like heatmap.',
+    duration: '2015-2017',
     name: 'Likeli',
     loadComponent: createFactory(Likeli),
     order: 4,
