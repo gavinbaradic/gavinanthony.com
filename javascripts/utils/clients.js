@@ -8,7 +8,7 @@ import Likeli from 'clients/Likeli'
 
 export default [
   {
-    description: 'Recipelist was initially built on Rails, but soon after, the entire front end was written in React. Later on, the method for querying data was transitioned to GraphQL to improve performance.',
+    description: 'Turn your favorite recipes on Pinterest into your grocery list within seconds using Recipelist. Ordering the ingredients is just another click away.',
     duration: '2016-2017',
     name: 'Recipelist',
     loadComponent: createFactory(Recipelist),

@@ -73,7 +73,7 @@
 }
 
 .client-quote {
-  padding: 400px 0;
+  padding: 300px 0;
 
   blockquote {
     font-size: 2rem;
@@ -89,5 +89,16 @@
       font-style: italic;
       font-family: var(--sansSerif);
     }
+  }
+
+  blockquote + p {
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    lost-column: 6/12;
+    lost-offset: 3/12;
   }
 }

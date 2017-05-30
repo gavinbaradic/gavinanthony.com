@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Logo from 'img/recipelist/branding.svg'
+
 const Recipelist = () => (
   <div>
     <section className="container full">
@@ -13,7 +15,7 @@ const Recipelist = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Vaporware church-key hell of, synth hoodie banjo sartorial authentic forage meggings aesthetic hot chicken. Drinking vinegar kickstarter try-hard unicorn scenester
+          Recipelist was initially built soley on Rails, but soon after, the entire front end was written in React. Later on, the method for querying data was transitioned to GraphQL to improve performance.
         </blockquote>
       </div>
     </section>
@@ -28,7 +30,7 @@ const Recipelist = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Vaporware church-key hell of, synth hoodie banjo sartorial authentic forage meggings aesthetic hot chicken. Drinking vinegar kickstarter try-hard unicorn scenester
+          The mobile app is built on React Native, allowing a cross platform experience with a single code base. The app also uses the same networking code base as the web site—since both are JavaScript.
         </blockquote>
       </div>
     </section>
@@ -43,16 +45,20 @@ const Recipelist = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Vaporware church-key hell of, synth hoodie banjo sartorial authentic forage meggings aesthetic hot chicken. Drinking vinegar kickstarter try-hard unicorn scenester
+          Bright, bold imagery was used for a Pinterest ad campaign. Pinterest was a great resource for advertising, as the target audience are all Pinterest users.
         </blockquote>
       </div>
     </section>
     <section className="container full">
       <div>
-        <img
-          src={require('img/recipelist/branding.svg')}
-          alt="Recipelist Branding"
-        />
+        <img src={Logo} alt="Recipelist Branding" />
+      </div>
+    </section>
+    <section className="container">
+      <div className="client-quote">
+        <blockquote>
+          The end result was a web/mobile app that ended up solving a personal problem of mine as well as serve as a rewarding experience to me.
+        </blockquote>
       </div>
     </section>
   </div>
