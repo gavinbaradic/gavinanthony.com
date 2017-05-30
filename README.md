@@ -1,24 +1,18 @@
-# README
+# README for gavinanthony.com
+My personal website :)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Install Dependencies
+```bash
+yarn
+```
 
-Things you may want to cover:
+### Run Locally
+```bash
+yarn dev # runs on https://localhost:8080
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### View Previous Versions by Year
+- [2016](https://github.com/gavinanthony/gavinanthony.com/tree/2016)
+- [2015](https://github.com/gavinanthony/gavinanthony.com/tree/2015)
+- [2014](https://github.com/gavinanthony/gavinanthony.com/tree/2014)
+- [2013](https://github.com/gavinanthony/gavinanthony.com/tree/2013)
