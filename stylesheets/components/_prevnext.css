@@ -8,10 +8,20 @@
 
     &:nth-child(1) {
       lost-column: 5/12;
+
+      @media (--mobile) {
+        height: 170px;
+        lost-column: 1/1;
+      }
     }
 
     &:nth-child(2) {
       lost-column: 7/12;
+
+      @media (--mobile) {
+        height: 170px;
+        lost-column: 1/1;
+      }
     }
   }
 }

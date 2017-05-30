@@ -1,8 +1,12 @@
 .header {
   margin-top: 128px;
+  flex-direction: column;
 
   a {
-    display: inline-flex;
+    display: flex;
+    font-size: 1.375rem;
+    line-height: calc(1.5rem * 1.375rem);
+    margin-right: auto;
     margin-top: 1rem;
   }
 }

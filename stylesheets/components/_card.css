@@ -57,3 +57,9 @@
     max-width: 512px;
   }
 }
+
+@media (--mobile) {
+  .card {
+    lost-column: 1/1;
+  }
+}

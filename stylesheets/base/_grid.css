@@ -2,6 +2,7 @@
 
 .container {
   lost-center: 1100px;
+  padding: 0 20px;
 
   &.small {
     lost-center: 700px;
@@ -9,6 +10,7 @@
 
   &.full {
     lost-center: 100%;
+    padding: 0;
   }
 }
 
@@ -57,6 +59,28 @@
   lost-offset: -4/12;
 }
 
+.m-t-100 {
+  margin-top: 100px;
+}
+
 .m-b-100 {
   margin-bottom: 100px;
+}
+
+@media (--mobile) {
+  .container,
+  .container.small,
+  .container.full {
+    lost-center: 500px;
+    padding: 0 20px;
+  }
+
+  .container.full {
+    padding: 0;
+  }
+
+  [class^='col-'] {
+    lost-column: 12/12;
+    lost-offset: 0/12;
+  }
 }

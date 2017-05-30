@@ -42,7 +42,7 @@ const Taplet = () => (
         />
       </div>
     </section>
-    <section className="container">
+    <section className="container m-t-100">
       <div>
         <img
           src={require('img/taplet/camera-options.png')}

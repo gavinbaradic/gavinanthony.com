@@ -7,9 +7,8 @@ export default function Header() {
       <h1>Product designer & developer from Milwaukee, WI.</h1>
       <h2>
         I work with startups and businesses to create great experiences on web & mobile applications.
-        {' '}
-        <Link to="/contact" className="btn dark">Get in touch</Link>
       </h2>
+      <Link to="/contact" className="btn dark">Get in touch</Link>
     </header>
   )
 }

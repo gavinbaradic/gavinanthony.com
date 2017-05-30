@@ -40,6 +40,8 @@
   --serif: 'G';
 }
 
+@custom-media --mobile (width < 500px);
+
 ::selection {
   background: rgba(255, 255, 255, .3);
   color: var(--white);
