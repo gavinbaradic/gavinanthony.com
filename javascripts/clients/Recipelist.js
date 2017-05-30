@@ -35,6 +35,21 @@ const Recipelist = () => (
     <section className="container full">
       <div>
         <img
+          src={require('img/recipelist/ads.png')}
+          alt="Recipelist Branding"
+        />
+      </div>
+    </section>
+    <section className="container">
+      <div className="client-quote">
+        <blockquote>
+          Vaporware church-key hell of, synth hoodie banjo sartorial authentic forage meggings aesthetic hot chicken. Drinking vinegar kickstarter try-hard unicorn scenester
+        </blockquote>
+      </div>
+    </section>
+    <section className="container full">
+      <div>
+        <img
           src={require('img/recipelist/branding.svg')}
           alt="Recipelist Branding"
         />
