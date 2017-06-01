@@ -9,6 +9,7 @@
       "never"
     ],
     "no-new": 0,
+    "default-case": 0,
     "comma-dangle": 0
   },
   "settings": {
