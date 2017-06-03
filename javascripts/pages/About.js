@@ -21,10 +21,13 @@ export default class About extends React.Component {
           </div>
           <div className="col-7-of-12">
             <p>
-              Polaroid banh mi biodiesel gastropub, readymade echo park distillery dreamcatcher narwhal everyday carry. Before they sold out tumblr gochujang ramps gentrify, trust fund polaroid hoodie post-ironic selvage. Deep v venmo food truck fashion axe, wolf af pug cray art party vice poutine chambray scenester wayfarers. Twee try-hard brooklyn, lo-fi vexillologist williamsburg blue bottle salvia wayfarers tote bag.
+              I am a designer and creator of digital products. Currently living in Milwaukee, Wisconsin.
             </p>
             <p>
-              Flexitarian aesthetic bicycle rights readymade intelligentsia man bun. Tofu roof party polaroid, +1 subway tile four dollar toast kinfolk coloring book health goth. Bitters la croix deep v lumbersexual polaroid.
+              My skills include mobile interface design, prototyping, wireframing, branding, product design, front-end development, and back-end development.
+            </p>
+            <p>
+              I have a passion for minimalism in design and believe great design should be invisible. Over the last 6 years, I've worked on a range of web and mobile products.
             </p>
           </div>
         </section>
@@ -53,7 +56,7 @@ export default class About extends React.Component {
                   <span>Gener8tor</span>
                   <span>2013–2014</span>
                 </h4>
-                <span>UX Intern</span>
+                <span>UX Designer</span>
               </li>
             </ul>
           </div>
