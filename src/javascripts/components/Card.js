@@ -18,7 +18,7 @@ const Card = ({ client, className, size }) => (
       href={`/work/${client.slug}`}
       key={client.name}
       style={{
-        backgroundImage: `url(img/${client.slug}/feature-${size}.png)`,
+        backgroundImage: `url(${require(`img/${client.slug}/feature-${size}.png`)})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}

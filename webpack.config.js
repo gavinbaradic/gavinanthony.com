@@ -10,11 +10,11 @@ module.exports = {
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
   entry: {
-    app: ['./javascripts/index.js'],
+    app: ['./src/javascripts/index.js'],
   },
   output: {
     filename: './javascripts/[name].js',
-    path: path.join(__dirname, '/public/assets'),
+    path: path.join(__dirname, 'dist'),
     publicPath: 'https://localhost:8080/assets/',
   },
   module: {
@@ -44,7 +44,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name]-[hash:5].[ext]',
+              name: './img/[name]-[hash:5].[ext]',
             },
           },
         ],
@@ -66,11 +66,11 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss'],
     modules: ['node_modules'],
     alias: {
-      img: path.join(__dirname, 'img'),
-      components: path.join(__dirname, 'javascripts/components'),
-      clients: path.join(__dirname, 'javascripts/clients'),
-      pages: path.join(__dirname, 'javascripts/pages'),
-      utils: path.join(__dirname, 'javascripts/utils'),
+      img: path.join(__dirname, 'src/img'),
+      components: path.join(__dirname, 'src/javascripts/components'),
+      clients: path.join(__dirname, 'src/javascripts/clients'),
+      pages: path.join(__dirname, 'src/javascripts/pages'),
+      utils: path.join(__dirname, 'src/javascripts/utils'),
     },
   },
   plugins: [new ExtractTextPlugin('./stylesheets/[name].css')],

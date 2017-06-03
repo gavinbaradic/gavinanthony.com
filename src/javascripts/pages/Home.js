@@ -42,7 +42,10 @@ export default class Index extends React.Component {
                 className="col-3-of-12"
                 key={work.img}
               >
-                <img src={`img/more/${work.img}.png`} alt={work.href} />
+                <img
+                  src={require(`img/more/${work.img}.png`)}
+                  alt={work.href}
+                />
               </a>
             ))}
           </section>
