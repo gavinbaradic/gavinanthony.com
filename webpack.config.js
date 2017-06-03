@@ -15,7 +15,7 @@ module.exports = {
   output: {
     filename: './javascripts/[name].js',
     path: path.join(__dirname, 'dist'),
-    publicPath: 'https://localhost:8080/assets/',
+    publicPath: '/dist/',
   },
   module: {
     rules: [
