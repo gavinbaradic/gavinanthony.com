@@ -7,6 +7,11 @@ const Jomo = () => (
         <img src={require('img/jomo/phone-in-hand.jpg')} alt="JOMO Feature" />
       </div>
     </section>
+    <section className="container">
+      <div>
+        <img src={require('img/jomo/icons.png')} alt="JOMO Feature" />
+      </div>
+    </section>
   </div>
 )
 
