@@ -1,22 +1,36 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   devtool: 'eval-source-map',
+
   devServer: {
     contentBase: './',
     stats: 'errors-only',
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
+
   entry: {
     app: ['./src/javascripts/index.js'],
+    vendor: [
+      'lost',
+      'prop-types',
+      'react-dom',
+      'react-ga',
+      'react-router-dom',
+      'react-tilt',
+      'react',
+    ],
   },
+
   output: {
-    filename: './javascripts/[name].js',
+    filename: 'javascripts/[name]-[hash].js',
     path: path.join(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: '/',
   },
+
   module: {
     rules: [
       {
@@ -62,6 +76,7 @@ module.exports = {
       },
     ],
   },
+
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
     modules: ['node_modules'],
@@ -73,5 +88,16 @@ module.exports = {
       utils: path.join(__dirname, 'src/javascripts/utils'),
     },
   },
-  plugins: [new ExtractTextPlugin('./stylesheets/[name].css')],
+
+  plugins: [
+    new ExtractTextPlugin('stylesheets/[name].css'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Gavin Anthony',
+      favicon: 'src/img/favicon.png',
+      template: 'index.ejs',
+    }),
+  ],
 }
