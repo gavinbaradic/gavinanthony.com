@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class About extends React.Component {
   componentDidMount() {
@@ -19,15 +20,27 @@ export default class About extends React.Component {
           <div className="col-5-of-12">
             <h4>Profile</h4>
           </div>
-          <div className="col-7-of-12">
+          <div className="col-7-of-12 link-border">
             <p>
-              I am a designer and creator of digital products. Currently living in Milwaukee, Wisconsin.
+              I am a designer and creator of digital products. Currently based
+              in the great city of Milwaukee, Wisconsin.
             </p>
             <p>
-              My skills include mobile interface design, prototyping, wireframing, branding, product design, front-end development, and back-end development.
+              My skills include mobile interface design, prototyping,
+              wireframing, branding, product design, front-end development, and
+              back-end development. I love building digital products and
+              creating enjoyable user experiences.
             </p>
             <p>
-              I have a passion for minimalism in design and believe great design should be invisible. Over the last 6 years, I've worked on a range of web and mobile products.
+              I have a passion for minimalism in design and believe great design
+              should be invisible. Over the last 6 years, I've worked on a range
+              of web and mobile products.
+            </p>
+            <p>
+              I'm always looking to work on fun projects. Feel free to
+              {' '}<Link to="/contact">reach out</Link> with work inquiries,
+              side
+              projects, or just to say hello!
             </p>
           </div>
         </section>
