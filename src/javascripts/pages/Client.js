@@ -27,16 +27,30 @@ export default class Client extends React.Component {
     website: '',
     appstore: '',
     playstore: '',
+    isLoading: 'fadeInUp',
   }
 
   componentWillMount() {
-    const { slug } = this.props.match.params
+    this.updateClient(this.props.match.params.slug)
+  }
+
+  componentDidMount() {
+    document.title = 'Gavin Anthony'
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ isLoading: 'fadeOutDown' })
+    setTimeout(() => this.updateClient(nextProps.match.params.slug), 500)
+  }
+
+  updateClient = (slug) => {
     const client = allClients.find(c => c.slug === slug)
 
     this.setState({
       component: client.loadComponent,
       name: client.name,
       order: client.order,
+      logo: client.logo,
       description: client.description,
       duration: client.duration,
       scope: client.scope,
@@ -44,23 +58,30 @@ export default class Client extends React.Component {
       website: client.website,
       appstore: client.appstore,
       playstore: client.playstore,
+      isLoading: 'fadeInUp',
     })
-    document.title = `${this.state.name} | Gavin Anthony`
-  }
 
-  componentDidMount() {
-    document.title = 'Gavin Anthony'
+    document.title = `${client.name} | Gavin Anthony`
   }
 
   render() {
-    const { duration, scope, stack, website, playstore, appstore } = this.state
+    const {
+      logo,
+      duration,
+      scope,
+      stack,
+      website,
+      playstore,
+      appstore,
+      isLoading,
+    } = this.state
 
     return (
-      <div>
-        <section className="client-cover container fadeInUp">
-          <img src={require(`img/${this.state.slug}/logo-white.svg`)} />
+      <div className={isLoading}>
+        <section className="client-cover container">
+          <img src={logo} alt="Logo" />
         </section>
-        <div className="client-overview fadeInUp">
+        <div className="client-overview">
           <section className="container">
             <div className="col-7-of-12 overview">
               <h3>Overview</h3>
@@ -81,7 +102,7 @@ export default class Client extends React.Component {
             </div>
           </section>
         </div>
-        <div className="fadeInUp">
+        <div>
           {this.state.component()}
         </div>
         <PrevNext allClients={allClients} clientId={this.state.order} />

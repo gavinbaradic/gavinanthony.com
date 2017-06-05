@@ -8,9 +8,11 @@ import Likeli from 'clients/Likeli'
 
 export default [
   {
-    description: 'Turn your favorite recipes on Pinterest into your grocery list within seconds using Recipelist. Ordering the ingredients is just another click away.',
+    description:
+      'Turn your favorite recipes on Pinterest into your grocery list within seconds using Recipelist. Ordering the ingredients is just another click away.',
     duration: '2016-2017',
     name: 'Recipelist',
+    logo: require('img/recipelist/logo-white.svg'),
     loadComponent: createFactory(Recipelist),
     order: 0,
     properties: { className: 'black' },
@@ -23,9 +25,11 @@ export default [
     website: 'https://recipelist.co',
   },
   {
-    description: 'JOMO, which stands for Joy of Missing Out, is committed (somewhat ironically) to delivering software and campaigns that challenge people to miss out on all the noise in the online world, and re-engage with people in the real-world.',
+    description:
+      'JOMO, which stands for Joy of Missing Out, is committed (somewhat ironically) to delivering software and campaigns that challenge people to miss out on all the noise in the online world, and re-engage with people in the real-world.',
     duration: '2015-2017',
     name: 'JOMO',
+    logo: require('img/jomo/logo-white.svg'),
     loadComponent: createFactory(Jomo),
     order: 1,
     properties: null,
@@ -38,14 +42,17 @@ export default [
     website: 'https://jomoapp.com',
   },
   {
-    description: 'Taplet is the best way to get awesome HD photos from your videos. Record with our powerful camera and pull out your favorite pictures. Save your enhanced photos or instantly share them instantly. Never miss another moment with Taplet.',
+    description:
+      'Taplet is the best way to get awesome HD photos from your videos. Record with our powerful camera and pull out your favorite pictures. Save your enhanced photos or instantly share them instantly. Never miss another moment with Taplet.',
     duration: '2014-2015',
     name: 'Taplet',
+    logo: require('img/taplet/logo-white.svg'),
     loadComponent: createFactory(Taplet),
     order: 2,
     properties: null,
     slug: 'taplet',
-    appstore: 'https://itunes.apple.com/us/app/taplet-hd-photos-from-iphone-gopro-or-snapchat/id670785096?mt=8',
+    appstore:
+      'https://itunes.apple.com/us/app/taplet-hd-photos-from-iphone-gopro-or-snapchat/id670785096?mt=8',
     // playstore: '',
     role: 'Product Designer',
     scope: 'iOS UI / UX',
@@ -53,9 +60,11 @@ export default [
     website: 'http://gotaplet.com',
   },
   {
-    description: 'BlipMe lets you connect with your campus in real-time on a map. See what people are doing on your campus right now. Discover fun stuff to do and great ways to meet new people on campus.',
+    description:
+      'BlipMe lets you connect with your campus in real-time on a map. See what people are doing on your campus right now. Discover fun stuff to do and great ways to meet new people on campus.',
     duration: '2015',
     name: 'Blip',
+    logo: require('img/blip/logo-white.svg'),
     loadComponent: createFactory(Blip),
     order: 3,
     properties: null,
@@ -68,9 +77,11 @@ export default [
     website: 'http://blipme.co',
   },
   {
-    description: 'Likeli transforms the way you go out, where you end up, and who you meet. Get real time updates where the crowds are on a weather-like heatmap.',
+    description:
+      'Likeli transforms the way you go out, where you end up, and who you meet. Get real time updates where the crowds are on a weather-like heatmap.',
     duration: '2015-2017',
     name: 'Likeli',
+    logo: require('img/likeli/logo-white.svg'),
     loadComponent: createFactory(Likeli),
     order: 4,
     properties: null,
