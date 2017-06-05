@@ -8,19 +8,18 @@ const networks = {
   Twitter: 'https://twitter.com/gavicoind',
 }
 
-const Footer = () => (
+const Footer = () =>
   <footer>
-    <section className="container link-border">
+    <section className="container">
       <aside>
         <Link to="/">© {new Date().getFullYear()} Gavin Anthony, Inc.</Link>
       </aside>
-      <aside>
-        {Object.keys(networks).map((network, i) => (
+      <aside className="link-border">
+        {Object.keys(networks).map((network, i) =>
           <Link to={networks[network]} target="_blank" key={i}>{network}</Link>
-        ))}
+        )}
       </aside>
     </section>
   </footer>
-)
 
 export default Footer

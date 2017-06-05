@@ -24,7 +24,7 @@ a {
 }
 
 .link-border a {
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
 
   &:hover {
     border-bottom: 2px solid var(--white);
