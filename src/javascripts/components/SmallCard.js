@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const Card = ({ client, direction }) =>
   <Tilt
-    key={client.slug}
     options={{
       max: 5,
       speed: 500,

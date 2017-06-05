@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const Card = ({ client, className, size }) =>
   <Tilt
-    key={client.slug}
     style={{ height: 613 }}
     options={{
       max: 5,
