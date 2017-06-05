@@ -59,14 +59,6 @@
   lost-offset: -4/12;
 }
 
-.m-t-100 {
-  margin-top: 100px;
-}
-
-.m-b-100 {
-  margin-bottom: 100px;
-}
-
 @media (--mobile) {
   .container, .container.small, .container.full {
     lost-center: 500px;
