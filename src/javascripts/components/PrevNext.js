@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom'
 
 import Card from 'components/SmallCard'
 
@@ -25,11 +27,9 @@ const PrevNext = (props) => {
   document.onkeydown = (e) => {
     switch (e.keyCode) {
       case 37:
-        window.location = `/work/${prevClient.slug}`
-        break
+        return props.history.push(`/work/${prevClient.slug}`)
       case 39:
-        window.location = `/work/${nextClient.slug}`
-        break
+        return props.history.push(`/work/${nextClient.slug}`)
     }
   }
 
@@ -43,4 +43,10 @@ const PrevNext = (props) => {
   )
 }
 
-export default PrevNext
+PrevNext.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+}
+
+export default withRouter(PrevNext)
