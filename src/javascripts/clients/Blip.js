@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Blip = () => (
+const Blip = () =>
   <div>
     <section className="container full">
       <div>
@@ -10,7 +10,10 @@ const Blip = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Discover fun things to do and great ways to meet new friends on your campus right now. Send a private blip and invite your friends to do something, meet up with people in a crowded area, or show a friend that you’re on the way.
+          Blip is a location-based social network that allows you to connect
+          with people nearby in a really cool way. Simply do a blip search to
+          browse all the people in your vicinity, never miss a meaningful
+          connection again.
         </blockquote>
       </div>
     </section>
@@ -19,7 +22,16 @@ const Blip = () => (
         <img src={require('img/blip/iphones.png')} alt="Blip Phones" />
       </div>
     </section>
+    <section className="container">
+      <div className="client-quote">
+        <blockquote>
+          Discover fun things to do and great ways to meet new friends on your
+          campus right now. Send a private blip and invite your friends to do
+          something, meet up with people in a crowded area, or show a friend
+          that you’re on the way.
+        </blockquote>
+      </div>
+    </section>
   </div>
-)
 
 export default Blip
