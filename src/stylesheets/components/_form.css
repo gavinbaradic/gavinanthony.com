@@ -17,8 +17,7 @@
     }
   }
 
-  input,
-  textarea {
+  input, textarea {
     background: rgba(255, 255, 255, .1);
     border: 0;
     border-radius: 3px;
@@ -41,8 +40,7 @@
   }
 }
 
-.button,
-button {
+.button, button {
   background: rgba(255, 255, 255, .15);
   border-radius: 64px;
   border: 0px solid transparent;

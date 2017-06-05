@@ -3,14 +3,14 @@
   font-weight: normal;
   src: url('../fonts/G.eot');
   src: url('../fonts/G.woff') format('woff'),
-       url('../fonts/G.ttf')  format('truetype')
+    url('../fonts/G.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'M';
   font-weight: normal;
   src: url('../fonts/MM.woff') format('woff'),
-       url('../fonts/MM.woff2') format('woff2')
+    url('../fonts/MM.woff2') format('woff2');
 }
 
 @font-face {
@@ -18,14 +18,14 @@
   font-weight: normal;
   font-style: italic;
   src: url('../fonts/MMI.woff') format('woff'),
-       url('../fonts/MMI.woff2') format('woff2')
+    url('../fonts/MMI.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'MD';
   font-weight: medium;
   src: url('../fonts/MD.woff') format('woff'),
-       url('../fonts/MD.woff2') format('woff2')
+    url('../fonts/MD.woff2') format('woff2');
 }
 
 :root {

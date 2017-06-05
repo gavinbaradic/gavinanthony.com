@@ -1,5 +1,4 @@
-nav,
-footer {
+nav, footer {
   align-items: center;
   display: flex;
   height: 256px;
@@ -12,8 +11,7 @@ footer {
   }
 }
 
-nav a,
-footer a {
+nav a, footer a {
   font-size: 1.25rem;
   font-family: var(--sansSerifBold);
   margin-left: 24px;

@@ -68,9 +68,7 @@
 }
 
 @media (--mobile) {
-  .container,
-  .container.small,
-  .container.full {
+  .container, .container.small, .container.full {
     lost-center: 500px;
     padding: 0 20px;
   }
