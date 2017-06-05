@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Tilt from 'react-tilt'
+import { Link } from 'react-router-dom'
 
-const Card = ({ client, direction }) => (
+const Card = ({ client, direction }) =>
   <Tilt
     key={client.slug}
     options={{
@@ -17,7 +18,7 @@ const Card = ({ client, direction }) => (
         : 'card half-size'
     }
   >
-    <a
+    <Link
       href={`/work/${client.slug}`}
       key={client.name}
       style={{
@@ -30,9 +31,8 @@ const Card = ({ client, direction }) => (
         <h4>{direction} Project</h4>
         <h3>{client.name}</h3>
       </div>
-    </a>
+    </Link>
   </Tilt>
-)
 
 Card.propTypes = {
   client: PropTypes.shape({
