@@ -4,6 +4,10 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "react/no-array-index-key": 0,
+    "max-len": [
+      2,
+      80
+    ],
     "semi": [
       2,
       "never"
