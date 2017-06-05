@@ -11,9 +11,9 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="fadeInUp">
         <Header />
-        <section className="container clients fadeInUp">
+        <section className="container clients">
           {allClients.map((client) => {
             const className = {
               className: client.properties !== null
@@ -31,10 +31,10 @@ export default class Index extends React.Component {
             )
           })}
         </section>
-        <div className="container morework fadeInUp">
+        <div className="container morework">
           <h3 className="col-1-of-1 headline">More Clients</h3>
           <section className="grid-row">
-            {moreWork.map(work => (
+            {moreWork.map(work =>
               <a
                 href={work.href}
                 target="_blank"
@@ -46,8 +46,8 @@ export default class Index extends React.Component {
                   src={require(`img/more/${work.img}.png`)}
                   alt={work.href}
                 />
-              </a>
-            ))}
+              </a>,
+            )}
           </section>
         </div>
       </div>
