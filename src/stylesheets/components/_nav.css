@@ -11,6 +11,13 @@ nav, footer {
   }
 }
 
+@media (--mobile) {
+  nav .container aside, footer .container aside {
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}
+
 nav a, footer a {
   font-size: 1.25rem;
   font-family: var(--sansSerifBold);
