@@ -50,7 +50,6 @@ export default class Contact extends React.Component {
     const variables = { name, email, message }
 
     if (this.validateForm(variables)) {
-      // this.setState({ isSubmitting: false, submitted: true })
       graphql({ query: formSubmission, variables })
         .then(() => this.setState({ isSubmitting: false, submitted: true }))
         .catch(err => console.log(err))
@@ -67,7 +66,7 @@ export default class Contact extends React.Component {
 
   render() {
     const isAnError = Object.keys(this.state.errors).some(
-      e => this.state.errors[e].length > 0
+      e => this.state.errors[e].length > 0,
     )
     return (
       <section className="contact container fadeInUp small">
