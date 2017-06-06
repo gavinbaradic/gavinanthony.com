@@ -34,10 +34,6 @@ export default class Client extends React.Component {
     this.updateClient(this.props.match.params.slug)
   }
 
-  componentDidMount() {
-    document.title = 'Gavin Anthony'
-  }
-
   componentWillReceiveProps(nextProps) {
     this.setState({ isLoading: 'fadeOutDown' })
     setTimeout(() => this.updateClient(nextProps.match.params.slug), 500)
