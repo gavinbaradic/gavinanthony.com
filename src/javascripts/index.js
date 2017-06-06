@@ -26,7 +26,7 @@ const ScrollToTop = () => {
 }
 
 const Root = () => (
-  <Router history={history}>
+  <Router>
     <div>
       <Nav />
       <Route component={ScrollToTop} />

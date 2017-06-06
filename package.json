@@ -41,7 +41,7 @@
     "react-dom": "^15.5.4",
     "react-ga": "^2.2.0",
     "react-router-dom": "^4.1.1",
-    "react-tilt": "^0.1.1",
+    "react-tilt": "https://github.com/jonathandion/react-tilt.git",
     "react-transition-group": "^1.1.3",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
