@@ -54,7 +54,7 @@ module.exports = {
         }),
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg)$/i,
+        test: /\.(jpg|jpeg|png|gif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -74,6 +74,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: 'raw-loader',
       },
     ],
   },
