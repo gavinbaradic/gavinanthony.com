@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --hot --inline --progress --history-api-fallback --https",
-    "build": "webpack"
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
