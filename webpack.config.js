@@ -90,7 +90,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('stylesheets/[name].css'),
+    new ExtractTextPlugin('stylesheets/[name]-[hash].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
     }),
