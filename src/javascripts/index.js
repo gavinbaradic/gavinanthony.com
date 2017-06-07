@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Client from './pages/Client'
+import PageNotFound from './pages/PageNotFound'
 
 ReactGA.initialize('UA-83701510-1')
 
@@ -25,7 +26,7 @@ const ScrollToTop = () => {
   return null
 }
 
-const Root = () => (
+const Root = () =>
   <Router>
     <div>
       <Nav />
@@ -36,10 +37,10 @@ const Root = () => (
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/work/:slug" component={Client} />
+        <Route component={PageNotFound} />
       </Switch>
       <Footer />
     </div>
   </Router>
-)
 
 render(<Root />, document.getElementById('app'))

@@ -5,8 +5,6 @@ import Detail from 'components/Detail'
 import PrevNext from 'components/PrevNext'
 import allClients from 'utils/clients'
 
-import DefaultComponent from 'clients'
-
 export default class Client extends React.Component {
   static propTypes = {
     match: PropTypes.shape({
@@ -18,7 +16,7 @@ export default class Client extends React.Component {
 
   state = {
     slug: this.props.match.params.slug,
-    component: DefaultComponent,
+    component: () => null,
     name: '',
     description: '',
     duration: '',

@@ -53,3 +53,56 @@
   animation-duration: 500ms;
   animation-name: fadeOutDown;
 }
+
+.glitch {
+  color: white;
+  font-size: 10vh;
+  line-height: 10vh;
+  margin: 15vh auto;
+  position: relative;
+}
+
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(15)+vh, 300vw, random(15)+vh, 0);
+    }
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 5px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  bottom: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 100vw, 0, 0);
+  animation: noise-anim 4s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(40)+vh, 300vw, random(40)+vh, 0);
+    }
+  }
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -5px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  bottom: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 100vw, 0, 0);
+  animation: noise-anim-2 1s infinite linear alternate-reverse;
+}
