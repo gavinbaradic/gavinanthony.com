@@ -7,6 +7,7 @@ export default class Contact extends React.Component {
   state = {
     submitted: false,
     isSubmitting: false,
+    buttonState: 'Send Message',
     name: '',
     email: '',
     message: '',
@@ -32,33 +33,44 @@ export default class Contact extends React.Component {
     })
   }
 
-  validateForm = (formData) => {
-    const validation = {
-      nameIsValid: formData.name.length > 0,
-      emailIsValid: /.+@.+/.test(formData.email),
-      messageIsValid: formData.message.length > 0,
-    }
-
-    return Object.keys(validation).every(v => validation[v] === true)
-  }
+  validateForm = formData => ({
+    name: formData.name.length > 0,
+    email: /.+@.+/.test(formData.email),
+    message: formData.message.length > 0,
+  })
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.setState({ isSubmitting: true })
+    this.setState({ isSubmitting: true, buttonState: 'Sending...' })
 
     const { name, email, message } = this.state
     const variables = { name, email, message }
+    const validateForm = this.validateForm(variables)
+    const valid = Object.keys(validateForm).every(v => validateForm[v] === true)
 
-    if (this.validateForm(variables)) {
+    if (valid) {
       graphql({ query: formSubmission, variables })
-        .then(() => this.setState({ isSubmitting: false, submitted: true }))
-        .catch(err => console.log(err))
+        .then(() =>
+          this.setState({
+            isSubmitting: false,
+            submitted: true,
+            buttonState: 'Thanks! We will be in touch soon',
+          }),
+        )
+        .catch(() =>
+          this.setState({
+            isSubmitting: false,
+            submitted: false,
+            buttonState: 'Send Message',
+          }),
+        )
     } else {
       this.setState({
+        buttonState: 'Send Message',
         errors: {
-          name: '* Do not leave blank',
-          email: '* Email is not valid',
-          message: '* Do not leave blank',
+          name: !validateForm.name && '* Do not leave blank',
+          email: !validateForm.email && '* Email is not valid',
+          message: !validateForm.message && '* Do not leave blank',
         },
       })
     }
@@ -116,9 +128,7 @@ export default class Contact extends React.Component {
                 className={this.state.submitted && 'submitted success'}
                 onClick={this.handleSubmit}
               >
-                {this.state.submitted
-                  ? "Thanks! We'll be in touch soon!"
-                  : 'Send Message'}
+                {this.state.buttonState}
               </button>
               {isAnError &&
                 <div className="errors">

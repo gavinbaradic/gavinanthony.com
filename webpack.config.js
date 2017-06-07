@@ -15,6 +15,7 @@ module.exports = {
   entry: {
     app: ['./src/javascripts/index.js'],
     vendor: [
+      'axios',
       'lost',
       'prop-types',
       'react-dom',
