@@ -69,7 +69,7 @@
     padding: 0;
   }
 
-  [class^='col-'] {
+  [class^='col-'], .split-view aside {
     lost-column: 12/12;
     lost-offset: 0/12;
   }

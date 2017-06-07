@@ -11,7 +11,7 @@ const Blip = () =>
       <div className="client-quote">
         <blockquote>
           Blip is a location-based social network that allows you to connect
-          with people nearby in a really cool way. Simply do a blip search to
+          with people nearby in an exciting way. Simply do a blip search to
           browse all the people in your vicinity, never miss a meaningful
           connection again.
         </blockquote>
@@ -30,6 +30,11 @@ const Blip = () =>
           something, meet up with people in a crowded area, or show a friend
           that you’re on the way.
         </blockquote>
+      </div>
+    </section>
+    <section className="container">
+      <div>
+        <img src={require('img/blip/iphones2.png')} alt="Blip Phones" />
       </div>
     </section>
   </div>

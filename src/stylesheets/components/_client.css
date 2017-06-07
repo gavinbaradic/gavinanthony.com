@@ -102,3 +102,19 @@
     lost-offset: 3/12;
   }
 }
+
+.split-view {
+  align-items: center;
+
+  aside {
+    lost-column: 1/2 flex;
+  }
+
+  .content {
+    padding: 0 100px;
+
+    @media (--mobile) {
+      padding: 20px;
+    }
+  }
+}

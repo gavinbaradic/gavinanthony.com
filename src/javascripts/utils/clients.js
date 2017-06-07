@@ -43,7 +43,7 @@ export default [
   },
   {
     description:
-      'Taplet is the best way to get awesome HD photos from your videos. Record with our powerful camera and pull out your favorite pictures. Save your enhanced photos or instantly share them instantly. Never miss another moment with Taplet.',
+      'Taplet is the best way to get awesome, high definition photos from your videos. Use the powerful camera to record and pull out photos of your favorite moments. Save your enhanced photos or share them instantly. Never miss the perfect shot with Taplet.',
     duration: '2014-2015',
     name: 'Taplet',
     logo: require('img/taplet/logo-white.svg'),

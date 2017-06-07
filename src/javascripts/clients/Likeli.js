@@ -1,4 +1,5 @@
 import React from 'react'
+import SVG from 'react-svg-inline'
 
 const Likeli = () =>
   <div>
@@ -18,13 +19,13 @@ const Likeli = () =>
       </div>
     </section>
     <section className="container full">
-      <div>
+      <div className="col-1-of-1 m-b-100">
         <img src={require('img/likeli/heatmap.jpg')} alt="Likeli Heatmap" />
       </div>
     </section>
     <section className="container full">
       <div>
-        <img src={require('img/likeli/branding.png')} alt="Likeli Branding" />
+        <SVG svg={require('img/likeli/branding.svg')} width="100%" />
       </div>
     </section>
   </div>

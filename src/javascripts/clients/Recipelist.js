@@ -1,8 +1,9 @@
 import React from 'react'
+import SVG from 'react-svg-inline'
 
 import Logo from 'img/recipelist/branding.svg'
 
-const Recipelist = () => (
+const Recipelist = () =>
   <div>
     <section className="container full">
       <div>
@@ -15,7 +16,9 @@ const Recipelist = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Recipelist was initially built soley on Rails, but soon after, the entire front end was written in React. Later on, the method for querying data was transitioned to GraphQL to improve performance.
+          Recipelist was initially built entirely on Rails, but soon after, the
+          entire front end was written in React. Later on, the method for
+          querying data was transitioned to GraphQL to improve performance.
         </blockquote>
       </div>
     </section>
@@ -30,7 +33,9 @@ const Recipelist = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          The mobile app is built on React Native, allowing a cross platform experience with a single code base. The app also uses the same networking code base as the web site—since both are JavaScript.
+          The mobile app is built on React Native. Because the front end was
+          written in React, many areas of the code base could shared, including
+          all of the networking and state management.
         </blockquote>
       </div>
     </section>
@@ -45,23 +50,25 @@ const Recipelist = () => (
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Bright, bold imagery was used for a Pinterest ad campaign. Pinterest was a great resource for advertising, as the target audience are all Pinterest users.
+          With Pinterest users being the target audience for the project, a
+          Pinterest ad campaign with bold, bright imagery captured the attention
+          of many potential users.
         </blockquote>
       </div>
     </section>
     <section className="container full">
-      <div>
-        <img src={Logo} alt="Recipelist Branding" />
+      <div className="col-1-of-1">
+        <SVG svg={Logo} width="100%" />
       </div>
     </section>
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          The end result was a web/mobile app that ended up solving a personal problem of mine as well as serve as a rewarding experience to me.
+          The end result was a web/mobile app that ended up solving a personal
+          problem of mine as well as serve as a rewarding experience to me.
         </blockquote>
       </div>
     </section>
   </div>
-)
 
 export default Recipelist

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import SVG from 'react-svg-inline'
 
 import Detail from 'components/Detail'
 import PrevNext from 'components/PrevNext'
@@ -73,7 +74,7 @@ export default class Client extends React.Component {
     return (
       <div className={isLoading}>
         <section className="client-cover container">
-          <img src={logo} alt="Logo" />
+          <SVG svg={logo} />
         </section>
         <div className="client-overview">
           <section className="container">
