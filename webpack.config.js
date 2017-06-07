@@ -21,6 +21,7 @@ module.exports = {
       'react-dom',
       'react-ga',
       'react-router-dom',
+      'react-svg-inline',
       'react-tilt',
       'react',
     ],
@@ -77,7 +78,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: 'raw-loader',
+        loader: 'raw-loader',
       },
     ],
   },
