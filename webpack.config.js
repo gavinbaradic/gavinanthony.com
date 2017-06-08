@@ -3,8 +3,12 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+const isProd = process.env.NODE_ENV === 'production'
+const chunkFile = isProd ? '[name].[chunkhash]' : '[name]'
+const hashFile = isProd ? '[name].[hash:5]' : '[name]'
+
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: isProd ? 'cheap-module-source-map' : 'eval-source-map',
 
   devServer: {
     contentBase: './',
@@ -28,7 +32,7 @@ module.exports = {
   },
 
   output: {
-    filename: 'javascripts/[name]-[hash].js',
+    filename: `javascripts/${chunkFile}.js`,
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -60,7 +64,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './img/[name]-[hash:5].[ext]',
+              name: `./img/${hashFile}.[ext]`,
             },
           },
         ],
@@ -71,7 +75,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              name: '[path][name].[ext]',
+              name: `[path]${chunkFile}.[ext]`,
             },
           },
         ],
@@ -96,7 +100,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('stylesheets/[name]-[hash].css'),
+    new ExtractTextPlugin(`stylesheets/${chunkFile}.css`),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
     }),
@@ -107,7 +111,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Gavin Anthony',
-      filename: '404.html',
+      chunkFile: '404.html',
       favicon: 'src/img/favicon.png',
       template: 'index.ejs',
     }),
