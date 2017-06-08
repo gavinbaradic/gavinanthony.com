@@ -30,7 +30,9 @@ const Jomo = () =>
       <aside className="content">
         <h3>JOMO Icon System</h3>
         <h4>
-          Each icon in the app was hand drawn to stay unique and personalized.
+          A hand made icon set was made to keep the iconography around the app
+          consistent and unique. Most icons were based on a 24x24 grid with 2pt
+          strokes.
         </h4>
       </aside>
       <aside>

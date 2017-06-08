@@ -23,6 +23,25 @@ const Likeli = () =>
         <img src={require('img/likeli/heatmap.jpg')} alt="Likeli Heatmap" />
       </div>
     </section>
+    <section className="container">
+      <div className="col-1-of-1">
+        <img src={require('img/likeli/macbook.png')} alt="Likeli" />
+      </div>
+    </section>
+    <section className="container">
+      <div className="client-quote">
+        <blockquote>
+          The website featured a heatmap video that shows transitions of heatmap
+          waves in different locations. The headline also transitioned
+          categories based on the heatmap video.
+        </blockquote>
+        <p>
+          To keep the headlines and video in sync, Window.RequestAnimationFrame
+          was used. This kept the two in sync, even if the window became
+          inactive, unlike SetTimeout().
+        </p>
+      </div>
+    </section>
     <section className="container full">
       <div>
         <SVG svg={require('img/likeli/branding.svg')} width="100%" />
