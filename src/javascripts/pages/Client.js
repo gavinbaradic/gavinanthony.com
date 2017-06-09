@@ -21,6 +21,7 @@ export default class Client extends React.Component {
     name: '',
     description: '',
     duration: '',
+    location: '',
     scope: '',
     stack: '',
     website: '',
@@ -48,6 +49,7 @@ export default class Client extends React.Component {
       logo: client.logo,
       description: client.description,
       duration: client.duration,
+      location: client.location,
       scope: client.scope,
       stack: client.stack,
       website: client.website,
@@ -63,6 +65,7 @@ export default class Client extends React.Component {
     const {
       logo,
       duration,
+      location,
       scope,
       stack,
       website,
@@ -87,6 +90,7 @@ export default class Client extends React.Component {
               <h3>Details</h3>
               <ul>
                 {duration && <Detail title="Duration" value={duration} text />}
+                {location && <Detail title="Location" value={location} text />}
                 {scope && <Detail title="Scope" value={scope} text />}
                 {stack && <Detail title="Stack" value={stack} text />}
                 {website && <Detail title="Website" value={website} link />}
