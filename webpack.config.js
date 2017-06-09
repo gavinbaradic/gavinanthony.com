@@ -111,7 +111,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Gavin Anthony',
-      chunkFile: '404.html',
+      filename: '404.html',
       favicon: 'src/img/favicon.png',
       template: 'index.ejs',
     }),
