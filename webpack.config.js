@@ -7,6 +7,16 @@ const isProd = process.env.NODE_ENV === 'production'
 const chunkFile = isProd ? '[name].[chunkhash]' : '[name]'
 const hashFile = isProd ? '[name].[hash:5]' : '[name]'
 
+const htmlConfig = {
+  title: 'Gavin Anthony',
+  favicon: 'src/img/favicon.png',
+  template: 'index.ejs',
+}
+
+const htmlConfig404 = Object.assign({}, htmlConfig, {
+  filename: '404.html',
+})
+
 module.exports = {
   devtool: isProd ? 'cheap-module-source-map' : 'eval-source-map',
 
@@ -104,16 +114,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
     }),
-    new HtmlWebpackPlugin({
-      title: 'Gavin Anthony',
-      favicon: 'src/img/favicon.png',
-      template: 'index.ejs',
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Gavin Anthony',
-      filename: '404.html',
-      favicon: 'src/img/favicon.png',
-      template: 'index.ejs',
-    }),
+    new HtmlWebpackPlugin(htmlConfig),
+    new HtmlWebpackPlugin(htmlConfig404),
   ],
 }
