@@ -43,7 +43,7 @@ const Likeli = () =>
       </div>
     </section>
     <section className="container full">
-      <div>
+      <div className="col-1-of-1">
         <SVG svg={require('img/likeli/branding.svg')} width="100%" />
       </div>
     </section>

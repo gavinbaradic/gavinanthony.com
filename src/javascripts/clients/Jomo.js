@@ -45,7 +45,7 @@ const Jomo = () =>
       </div>
     </section>
     <section className="container full">
-      <div>
+      <div className="col-1-of-1">
         <SVG svg={require('img/jomo/branding.svg')} width="100%" />
       </div>
     </section>
