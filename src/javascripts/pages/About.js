@@ -10,8 +10,10 @@ export default class About extends React.Component {
     return (
       <div>
         <section className="container fadeInUp photo">
-          <div className="col-8-of-12 portrait" />
-          <div className="col-4-of-12 pull-4">
+          <div className="col-6-of-12">
+            <img src={require('img/portrait.png')} />
+          </div>
+          <div className="col-4-of-12 pull-2">
             <h1>About Me</h1>
             <h2>Designer, Developer</h2>
           </div>

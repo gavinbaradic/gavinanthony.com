@@ -29,6 +29,10 @@ a {
   &:hover {
     border-bottom: 2px solid var(--white);
   }
+
+  &:active {
+    opacity: .5;
+  }
 }
 
 img, svg {

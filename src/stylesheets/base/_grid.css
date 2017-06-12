@@ -55,6 +55,18 @@
   lost-column: 8/12 flex;
 }
 
+.pull-1 {
+  lost-offset: -1/12;
+}
+
+.pull-2 {
+  lost-offset: -2/12;
+}
+
+.pull-3 {
+  lost-offset: -3/12;
+}
+
 .pull-4 {
   lost-offset: -4/12;
 }
