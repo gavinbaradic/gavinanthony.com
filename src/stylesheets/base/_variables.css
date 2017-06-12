@@ -35,6 +35,22 @@
   --lightGray: #444;
   --white: #ffffff;
 
+  --lightStripes: repeating-linear-gradient(
+    45deg,
+    var(--mediumGray),
+    var(--mediumGray) 4px,
+    var(--darkGray) 4px,
+    var(--darkGray) 8px
+  );
+
+  --darkStripes: repeating-linear-gradient(
+    45deg,
+    var(--mediumGray),
+    var(--mediumGray) 4px,
+    var(--black) 4px,
+    var(--black) 8px
+  );
+
   --baseFont: -apple-system,
     '.SFNSText-Regular',
     'San Francisco',
