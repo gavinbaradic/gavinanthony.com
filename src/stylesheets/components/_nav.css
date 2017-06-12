@@ -2,6 +2,7 @@ nav, footer {
   align-items: center;
   display: flex;
   height: 256px;
+  overflow-x: hidden;
 
   .container {
     display: flex;

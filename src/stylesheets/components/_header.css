@@ -9,6 +9,10 @@
     margin-right: auto;
     margin-top: 1rem;
   }
+
+  @media (--mobile) {
+    margin-top: 32px;
+  }
 }
 
 h1 {
