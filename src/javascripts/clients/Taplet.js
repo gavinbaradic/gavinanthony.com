@@ -60,8 +60,7 @@ const Taplet = () =>
       <div className="client-quote">
         <blockquote>
           The end result was a sleek, dark interface that was easy to use and
-          stayed focused on the task-at-hand. Throughout many iterations and
-          concepts, the feature-set stayed true to the main goal of the app.
+          received positive reviews on the app store.
         </blockquote>
       </div>
     </section>

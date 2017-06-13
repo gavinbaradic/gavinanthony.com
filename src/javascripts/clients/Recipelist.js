@@ -16,8 +16,8 @@ const Recipelist = () =>
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          Recipelist was initially built entirely on Rails, but soon after, the
-          entire front end was written in React. Later on, the method for
+          Recipelist was initially built entirely on Rails but was later written
+          in React.js, using the Rails rest API. Later on, the method for
           querying data was transitioned to GraphQL to improve performance.
         </blockquote>
       </div>
@@ -64,8 +64,10 @@ const Recipelist = () =>
     <section className="container">
       <div className="client-quote">
         <blockquote>
-          The end result was a web/mobile app that ended up solving a personal
-          problem of mine as well as serve as a rewarding experience to me.
+          The end result was a web/mobile app that solved a personal problem of
+          mine. It also ended up being a great opportunity to learn new
+          javascript frameworks, creating back-end APIs, and introducing myself
+          to mobile app development.
         </blockquote>
       </div>
     </section>
