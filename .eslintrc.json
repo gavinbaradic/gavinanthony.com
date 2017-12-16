@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/no-array-index-key": 0,
+    "max-len": [
+      2,
+      80
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "no-new": 0,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "default-case": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": "webpack.config.js"
+    }
+  },
+  "env": {
+    "browser": true
+  }
+}
